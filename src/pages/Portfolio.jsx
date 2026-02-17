@@ -45,6 +45,15 @@ export default function Portfolio() {
                     technology="Site réalisé avec Vue.js"
                 />
                 <Project
+                    srcImg="/assets/img/portfolio/cv.jpg"
+                    altImg="Screenshot du site contenant le CV. On y voit une photo d'un homme brun. Les couleurs du fonds sont blanc et rouge."
+                    title="Curriculum Vitæ"
+                    description="Réalisation d'un CV en HTML et CSS."
+                    linkTitle="CV"
+                    link="https://fb-lb.github.io/CEF_devoirs_cv/"
+                    technology="Site réalisé en HTML/CSS"
+                />
+                <Project
                     srcImg="/assets/img/portfolio/restaurant-japonais.jpg"
                     alt="Cinq sushis au thon ou saumon ou crevettes entre deux rangées de trois maki thon avocat et saumon avocat"
                     title="Restaurant Akira"
