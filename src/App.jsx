@@ -4,7 +4,6 @@ import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Services from './pages/Services.jsx';
 import Portfolio from './pages/Portfolio.jsx';
-import Blog from './pages/Blog.jsx';
 import Contact from './pages/Contact.jsx';
 import LegalMentions from './pages/LegalMentions.jsx';
 import Not_found from './pages/Not_found.jsx';
@@ -42,7 +41,6 @@ export default function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/services/" element={<Services/>}></Route>
         <Route path="/portfolio/" element={<Portfolio/>}></Route>
-        <Route path="/blog/" element={<Blog/>}></Route>
         <Route path="/contact/" element={<Contact/>}></Route>
         <Route path="/mentions-legales/" element={<LegalMentions/>}></Route>
         <Route path="*" element={<Not_found/>}></Route>

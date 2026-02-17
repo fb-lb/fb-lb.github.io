@@ -51,14 +51,6 @@ export default function Footer() {
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Espace bien-être</Link></li>
                     </ul>
                 </section>
-                <section>
-                    <h4>Mes derniers articles</h4>
-                    <ul className="footer__link-list fa-ul">
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/blog/">Coder son site en HTML/CSS</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/blog/">Vendre ses produits sur le web</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/blog/">Se positionner sur Google</Link></li>
-                    </ul>
-                </section>
             </div>
             <small className='footer__copyright'>&copy; Designed by {user.name}</small>
         </footer>    

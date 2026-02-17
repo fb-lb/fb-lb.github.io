@@ -62,9 +62,6 @@ export default function Header() {
                             <Link id='portfolio-link' className="nav-link text-white-50 text-uppercase link-light" to="/portfolio/">Réalisations</Link>
                         </li>
                         <li className="nav-item">
-                            <Link id='blog-link' className="nav-link text-white-50 text-uppercase link-light" to="/blog/">Blog</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link id='contact-link' className="nav-link text-white-50 text-uppercase link-light" to="/contact/">Me contacter</Link>
                         </li>
                     </ul>
