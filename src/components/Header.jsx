@@ -35,8 +35,6 @@ export default function Header() {
             document.getElementById('services-link').className = 'activeLink nav-link text-uppercase';
         } else if (location.pathname==='/portfolio/') {
             document.getElementById('portfolio-link').className = 'activeLink nav-link text-uppercase';
-        } else if (location.pathname==='/blog/') {
-            document.getElementById('blog-link').className = 'activeLink nav-link text-uppercase';
         } else if (location.pathname==='/contact/') {
             document.getElementById('contact-link').className = 'activeLink nav-link text-uppercase';
         }
