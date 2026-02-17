@@ -36,13 +36,13 @@ export default function Portfolio() {
             <div className='portfolio__line'></div>
             <div className='portfolio__achievement-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
                 <Project
-                    srcImg="/assets/img/portfolio/fresh-food.jpg"
-                    altImg="Panier de légumes vue du dessus contenant une aubergine, un poivron jaune, des radis, de la salade et du persil"
-                    title="Fresh food"
-                    description="Réalisation d'un site avec commande en ligne."
-                    linkTitle="FreshFood.fr"
-                    link="https://www.freshfood.fr/"
-                    technology="Site réalisé avec PHP et MySQL"
+                    srcImg="/assets/img/portfolio/portfolio.jpg"
+                    altImg="Screenshot du site du portfolio initial. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
+                    title="Portfolio initial"
+                    description="Réalisation d'un site One Page."
+                    linkTitle="Portfolio"
+                    link="https://fb-lb.github.io/CEF_devoirs_portfolio/"
+                    technology="Site réalisé avec Vue.js"
                 />
                 <Project
                     srcImg="/assets/img/portfolio/restaurant-japonais.jpg"

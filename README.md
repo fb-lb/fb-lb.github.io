@@ -1,8 +1,7 @@
-# John Doe Website (React + Vite)
+# Portfolio (React + Vite)
 
-This is the John Doe website.
-URL to home page : https://hyle.alwaysdata.net/john-doe-website/
-URL to access to profil information : https://hyle.alwaysdata.net/john-doe-website/profil/
+This is my portfolio where you can find my projects.
+URL to home page : https://fb-lb.github.io/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

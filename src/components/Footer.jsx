@@ -37,7 +37,7 @@ export default function Footer() {
                     <h4>Liens utiles</h4>
                     <ul className="footer__link-list fa-ul">
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/">Accueil</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/#about/">A propos</Link></li>
+                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/#about">A propos</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/services/">Services</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/contact/">Me contacter</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/mentions-legales/">Mentions légales</Link></li>
