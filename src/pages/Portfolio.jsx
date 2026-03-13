@@ -36,6 +36,24 @@ export default function Portfolio() {
             <div className='portfolio__line'></div>
             <div className='portfolio__achievement-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
                 <Project
+                    srcImg="/assets/img/portfolio/stubborn.jpg"
+                    altImg="Screenshot du site du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
+                    title="Stubborn"
+                    description="Réalisation d'une application e-commerce."
+                    linkTitle="Au Petit Village"
+                    link="https://hyle.alwaysdata.net/"
+                    technology="Site réalisé avec Symfony (fullstack) et MySQL"
+                />
+                <Project
+                    srcImg="/assets/img/portfolio/au-petit-village.jpg"
+                    altImg="Screenshot du site du site au petit village. On y voit de haut en bas le logo du site, la phrase d'accueil du site, les personnages du village d'Astérix. En-dessous à gauche, il y a un texte et à droite une image du village d'Astérix entourée d'un halo vert."
+                    title="Au Petit Village"
+                    description="Réalisation du front-end d'une application e-commerce."
+                    linkTitle="Au Petit Village"
+                    link="https://fb-lb.github.io/CEF_devoirs_au-petit-village/"
+                    technology="Site réalisé avec Angular"
+                />
+                <Project
                     srcImg="/assets/img/portfolio/portfolio.jpg"
                     altImg="Screenshot du site du portfolio initial. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
                     title="Portfolio initial"
@@ -51,24 +69,6 @@ export default function Portfolio() {
                     description="Réalisation d'un CV en HTML et CSS."
                     linkTitle="CV"
                     link="https://fb-lb.github.io/CEF_devoirs_cv/"
-                    technology="Site réalisé en HTML/CSS"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/restaurant-japonais.jpg"
-                    alt="Cinq sushis au thon ou saumon ou crevettes entre deux rangées de trois maki thon avocat et saumon avocat"
-                    title="Restaurant Akira"
-                    description="Réalisation d'un site vitrine."
-                    linkTitle="AkiraSushiBar.gr"
-                    link="https://akirasushibar.gr/"
-                    technology="Site réalisé avec WordPress"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/espace-bien-etre.jpg"
-                    alt="Représentation d'une tête de bouddha avec une fleur de lotus avec à droite un empilement pyramidal de quatre galet. Les différents éléments flottent sur l'eau et il y a un coucher de soleil en arrière plan."
-                    title="Espace bien-être"
-                    description="Réalisation d'un site vitrine pour un praticien de bien-être."
-                    linkTitle="espace-bienetre.com"
-                    link="https://www.espace-bienetre.com/"
                     technology="Site réalisé en HTML/CSS"
                 />
             </div>
