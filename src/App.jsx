@@ -11,20 +11,18 @@ import { Routes, Route } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function App() {
+export default function App() { 
 
   const location = useLocation();
-
-  let metaRobots = document.createElement("meta");
-  metaRobots.setAttribute("id", "robots");
-  metaRobots.setAttribute("name", "robots");
-  metaRobots.setAttribute("content", "noindex");
-
-  let head = document.querySelector('head');
-
+  
   useEffect(() => {
       // No index on legal mentions page
-
+       
+      let metaRobots = document.createElement("meta");
+      metaRobots.setAttribute("id", "robots");
+      metaRobots.setAttribute("name", "robots");
+      metaRobots.setAttribute("content", "noindex");
+      let head = document.querySelector('head');
       let robots = document.getElementById('robots');
 
       if (location.pathname === "/mentions-legales/" && robots == null){

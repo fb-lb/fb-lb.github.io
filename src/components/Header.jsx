@@ -20,11 +20,11 @@ export default function Header() {
     }
 
     // Add active class on link menu according to URL pathname
-
-    const allLink = document.querySelectorAll('.nav-link');
     const location = useLocation();
-
+    
     useEffect(() => {
+        const allLink = document.querySelectorAll('.nav-link');    
+
         allLink.forEach(link => {
             link.className= 'nav-link text-white-50 text-uppercase link-light';
         });
