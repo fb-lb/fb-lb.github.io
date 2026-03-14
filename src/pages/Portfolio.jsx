@@ -45,13 +45,22 @@ export default function Portfolio() {
                     technology="Site réalisé avec Angular, Express et MySQL"
                 />
                 <Project
+                    srcImg="/assets/img/portfolio/catway.jpg"
+                    altImg="Screenshot du site catway. On y voit le texte présent sur la page d'accueil."
+                    title="Catway API"
+                    description="Réalisation d'une API pour des réservations de quai d'amarrage dans un port."
+                    linkTitle="Catway API"
+                    link="https://catway-api.onrender.com/"
+                    technology="Site réalisé avec Express et EJS (+ SwaggerHub)"
+                />
+                <Project
                     srcImg="/assets/img/portfolio/trouve-ton-artisan.jpg"
                     altImg="Screenshot du site Trouve ton artisan. On y voit en haut l'en-tête contenant une barre de recherche et les différentes catégories des artisans. Sous l'en-tête, on peut voir la photo d'un paysage avec un lac au premier plan et des montagnes au second plan. Sous l'image il y a un schéma des étapes pour trouver son artisan sur le site."
                     title="Trouve ton artisan !"
                     description="Réalisation d'une plateforme pour trouver et contacter un artisan."
                     linkTitle="Trouve ton artisan"
                     link="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
-                    technology="Site réalisé avec Angular"
+                    technology="Site réalisé avec Angular (+ Tailwind CSS, Sentry, EmailJS)"
                 />
                 <Project
                     srcImg="/assets/img/portfolio/stubborn.jpg"
