@@ -45,6 +45,15 @@ export default function Portfolio() {
                     technology="Site réalisé avec Angular, Express et MySQL"
                 />
                 <Project
+                    srcImg="/assets/img/portfolio/trouve-ton-artisan.jpg"
+                    altImg="Screenshot du site Trouve ton artisan. On y voit en haut l'en-tête contenant une barre de recherche et les différentes catégories des artisans. Sous l'en-tête, on peut voir la photo d'un paysage avec un lac au premier plan et des montagnes au second plan. Sous l'image il y a un schéma des étapes pour trouver son artisan sur le site."
+                    title="Trouve ton artisan !"
+                    description="Réalisation d'une plateforme pour trouver et contacter un artisan."
+                    linkTitle="Trouve ton artisan"
+                    link="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
+                    technology="Site réalisé avec Angular"
+                />
+                <Project
                     srcImg="/assets/img/portfolio/stubborn.jpg"
                     altImg="Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
                     title="Stubborn"
