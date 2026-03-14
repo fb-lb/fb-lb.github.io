@@ -36,8 +36,17 @@ export default function Portfolio() {
             <div className='portfolio__line'></div>
             <div className='portfolio__achievement-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
                 <Project
+                    srcImg="/assets/img/portfolio/knowledge.jpg"
+                    altImg="Screenshot du site knowledge. On y voit en haut l'en-tête sur fond bleu clair avec le logo de l'entreprise dans la partie supérieure et le menu de navigation sur la partie basse. Sous l'en-tête, on peut voir le texte du contenu de la page d'accueil."
+                    title="Knowledge"
+                    description="Réalisation d'une plateforme d'e-learning."
+                    linkTitle="Knowledge"
+                    link="https://fb-lb.github.io/CEF_devoirs_knowledge-front/"
+                    technology="Site réalisé avec Angular, Express et MySQL"
+                />
+                <Project
                     srcImg="/assets/img/portfolio/stubborn.jpg"
-                    altImg="Screenshot du site du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
+                    altImg="Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
                     title="Stubborn"
                     description="Réalisation d'une application e-commerce."
                     linkTitle="Au Petit Village"
@@ -46,7 +55,7 @@ export default function Portfolio() {
                 />
                 <Project
                     srcImg="/assets/img/portfolio/au-petit-village.jpg"
-                    altImg="Screenshot du site du site au petit village. On y voit de haut en bas le logo du site, la phrase d'accueil du site, les personnages du village d'Astérix. En-dessous à gauche, il y a un texte et à droite une image du village d'Astérix entourée d'un halo vert."
+                    altImg="Screenshot du site au petit village. On y voit de haut en bas le logo du site, la phrase d'accueil du site, les personnages du village d'Astérix. En-dessous à gauche, il y a un texte et à droite une image du village d'Astérix entourée d'un halo vert."
                     title="Au Petit Village"
                     description="Réalisation du front-end d'une application e-commerce."
                     linkTitle="Au Petit Village"
