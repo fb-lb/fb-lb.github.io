@@ -45,6 +45,24 @@ export default function Portfolio() {
                     technology="Site réalisé avec Angular, Express et MySQL"
                 />
                 <Project
+                    srcImg="/assets/img/portfolio/stubborn.jpg"
+                    altImg="Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
+                    title="Stubborn"
+                    description="Réalisation d'une application e-commerce."
+                    linkTitle="Stubborn"
+                    link="https://hyle.alwaysdata.net/"
+                    technology="Site réalisé avec Symfony (fullstack) et MySQL"
+                />
+                <Project
+                    srcImg="/assets/img/portfolio/mediatheque.jpg"
+                    altImg="Screenshot du site de la médiathèque. On y voit le texte présent sur la page d'accueil."
+                    title="Médiathèque"
+                    description="Réalisation d'une application pour des réservations de médias."
+                    linkTitle="Médiathèque"
+                    link="https://cef-devoirs-mediatheque.onrender.com/"
+                    technology="Site réalisé avec Django et MySQL"
+                />
+                <Project
                     srcImg="/assets/img/portfolio/catway.jpg"
                     altImg="Screenshot du site catway. On y voit le texte présent sur la page d'accueil."
                     title="Catway API"
@@ -61,15 +79,6 @@ export default function Portfolio() {
                     linkTitle="Trouve ton artisan"
                     link="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
                     technology="Site réalisé avec Angular (+ Tailwind CSS, Sentry, EmailJS)"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/stubborn.jpg"
-                    altImg="Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
-                    title="Stubborn"
-                    description="Réalisation d'une application e-commerce."
-                    linkTitle="Au Petit Village"
-                    link="https://hyle.alwaysdata.net/"
-                    technology="Site réalisé avec Symfony (fullstack) et MySQL"
                 />
                 <Project
                     srcImg="/assets/img/portfolio/au-petit-village.jpg"
