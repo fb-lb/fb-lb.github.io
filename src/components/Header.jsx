@@ -20,11 +20,11 @@ export default function Header() {
     }
 
     // Add active class on link menu according to URL pathname
-
-    const allLink = document.querySelectorAll('.nav-link');
     const location = useLocation();
-
+    
     useEffect(() => {
+        const allLink = document.querySelectorAll('.nav-link');    
+
         allLink.forEach(link => {
             link.className= 'nav-link text-white-50 text-uppercase link-light';
         });
@@ -35,8 +35,6 @@ export default function Header() {
             document.getElementById('services-link').className = 'activeLink nav-link text-uppercase';
         } else if (location.pathname==='/portfolio/') {
             document.getElementById('portfolio-link').className = 'activeLink nav-link text-uppercase';
-        } else if (location.pathname==='/blog/') {
-            document.getElementById('blog-link').className = 'activeLink nav-link text-uppercase';
         } else if (location.pathname==='/contact/') {
             document.getElementById('contact-link').className = 'activeLink nav-link text-uppercase';
         }
@@ -60,9 +58,6 @@ export default function Header() {
                         </li>
                         <li className="nav-item">
                             <Link id='portfolio-link' className="nav-link text-white-50 text-uppercase link-light" to="/portfolio/">Réalisations</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link id='blog-link' className="nav-link text-white-50 text-uppercase link-light" to="/blog/">Blog</Link>
                         </li>
                         <li className="nav-item">
                             <Link id='contact-link' className="nav-link text-white-50 text-uppercase link-light" to="/contact/">Me contacter</Link>

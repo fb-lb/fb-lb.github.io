@@ -4,41 +4,25 @@ import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Services from './pages/Services.jsx';
 import Portfolio from './pages/Portfolio.jsx';
-import Blog from './pages/Blog.jsx';
 import Contact from './pages/Contact.jsx';
 import LegalMentions from './pages/LegalMentions.jsx';
-import Profil from './pages/Profil.jsx';
+import Not_found from './pages/Not_found.jsx';
 import { Routes, Route } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function App() {
+export default function App() { 
 
   const location = useLocation();
-
-  let metaRobots = document.createElement("meta");
-  metaRobots.setAttribute("id", "robots");
-  metaRobots.setAttribute("name", "robots");
-  metaRobots.setAttribute("content", "noindex");
-
-  let head = document.querySelector('head');
-
+  
   useEffect(() => {
-      // Not display header and footer on Profil Page
-
-      const header = document.querySelector('header');
-      const footer = document.querySelector('footer');
-
-      if (location.pathname==="/profil/" || location.pathname==="/profil"){
-        header.classList.add("display");
-        footer.classList.add("display");
-      } else {
-        header.classList.remove("display");
-        footer.classList.remove("display");
-      }
-
       // No index on legal mentions page
-
+       
+      let metaRobots = document.createElement("meta");
+      metaRobots.setAttribute("id", "robots");
+      metaRobots.setAttribute("name", "robots");
+      metaRobots.setAttribute("content", "noindex");
+      let head = document.querySelector('head');
       let robots = document.getElementById('robots');
 
       if (location.pathname === "/mentions-legales/" && robots == null){
@@ -46,6 +30,14 @@ export default function App() {
       } else if (location.pathname != "/mentions-legales/" && robots != null) {
         robots.remove();
       } 
+
+      // Go to url hash
+      if (location.hash) {
+        const el = document.getElementById(location.hash.slice(1));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
   }, [location]);
 
   return (
@@ -55,10 +47,9 @@ export default function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/services/" element={<Services/>}></Route>
         <Route path="/portfolio/" element={<Portfolio/>}></Route>
-        <Route path="/blog/" element={<Blog/>}></Route>
         <Route path="/contact/" element={<Contact/>}></Route>
         <Route path="/mentions-legales/" element={<LegalMentions/>}></Route>
-        <Route path="/profil/" element={<Profil/>}></Route>
+        <Route path="*" element={<Not_found/>}></Route>
       </Routes>
       <Footer/>
     </>

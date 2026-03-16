@@ -37,7 +37,7 @@ export default function Footer() {
                     <h4>Liens utiles</h4>
                     <ul className="footer__link-list fa-ul">
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/">Accueil</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/#about/">A propos</Link></li>
+                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/#about">A propos</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/services/">Services</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/contact/">Me contacter</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/mentions-legales/">Mentions légales</Link></li>
@@ -49,14 +49,6 @@ export default function Footer() {
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Fresh food</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Restaurant Akira</Link></li>
                         <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Espace bien-être</Link></li>
-                    </ul>
-                </section>
-                <section>
-                    <h4>Mes derniers articles</h4>
-                    <ul className="footer__link-list fa-ul">
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/blog/">Coder son site en HTML/CSS</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/blog/">Vendre ses produits sur le web</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/blog/">Se positionner sur Google</Link></li>
                     </ul>
                 </section>
             </div>

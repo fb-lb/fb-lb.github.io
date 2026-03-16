@@ -5,7 +5,7 @@ export default function Home() {
         <main className="home">
             <div className='principal'>
                 <div className='principal__filter'>
-                    <h1 className='principal__h1'>Bonjour, je suis John Doe</h1>
+                    <h1 className='principal__h1'>Bonjour, je suis fb-lb</h1>
                     <h2 className='principal__h2'>Développeur web full stack</h2>
                     <a href='#about' className="principal__link btn btn-primary">En savoir plus</a>
                 </div>
