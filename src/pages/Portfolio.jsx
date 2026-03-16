@@ -19,7 +19,7 @@ function Project(props) {
                 <div className="card-body">
                     <h2 className="portfolio__achievement-title card-title">{props.title}</h2>
                     <p className="portfolio__achievement-text card-text mb-3">{props.description}</p>
-                    <a className="btn btn-outline-primary" title={props.linkTitle} href={props.link} target="_blank" rel="noreferrer nofollow">Voir</a>     
+                    <a className="btn btn-outline-primary" title={"Accéder au site web du projet " + props.linkTitle} href={props.link} target="_blank" rel="noreferrer nofollow">Voir</a>     
                 </div>
                 <p className="portfolio__achievement-text card-footer">{props.technology}</p>
             </article>
@@ -76,7 +76,7 @@ export default function Portfolio() {
                     altImg="Screenshot du site Trouve ton artisan. On y voit en haut l'en-tête contenant une barre de recherche et les différentes catégories des artisans. Sous l'en-tête, on peut voir la photo d'un paysage avec un lac au premier plan et des montagnes au second plan. Sous l'image il y a un schéma des étapes pour trouver son artisan sur le site."
                     title="Trouve ton artisan !"
                     description="Réalisation d'une plateforme pour trouver et contacter un artisan."
-                    linkTitle="Trouve ton artisan"
+                    linkTitle="Trouve ton artisan !"
                     link="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
                     technology="Site réalisé avec Angular (+ Tailwind CSS, Sentry, EmailJS)"
                 />
@@ -94,7 +94,7 @@ export default function Portfolio() {
                     altImg="Screenshot du site du portfolio initial. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
                     title="Portfolio initial"
                     description="Réalisation d'un site One Page."
-                    linkTitle="Portfolio"
+                    linkTitle="Portfolio initial"
                     link="https://fb-lb.github.io/CEF_devoirs_portfolio/"
                     technology="Site réalisé avec Vue.js"
                 />
