@@ -10,6 +10,7 @@ import Not_found from './pages/Not_found.jsx';
 import { Routes, Route } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import Project from './pages/Project.jsx';
 
 export default function App() { 
 
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/services/" element={<Services/>}></Route>
         <Route path="/portfolio/" element={<Portfolio/>}></Route>
+        <Route path="/projet/:projectSlug" element={<Project/>}></Route>
         <Route path="/contact/" element={<Contact/>}></Route>
         <Route path="/mentions-legales/" element={<LegalMentions/>}></Route>
         <Route path="*" element={<Not_found/>}></Route>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/portfolio.css';
 import { PropTypes } from 'prop-types';
 
@@ -7,7 +8,9 @@ Project.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     linkTitle: PropTypes.string,
-    link: PropTypes.string,
+    projectLink: PropTypes.string,
+    githubLink: PropTypes.string,
+    websiteLink: PropTypes.string,
     technology: PropTypes.string
   };
 
@@ -18,8 +21,12 @@ function Project(props) {
                 <img src={props.srcImg} className="card-img-top" alt={props.altImg}/>
                 <div className="card-body">
                     <h2 className="portfolio__achievement-title card-title">{props.title}</h2>
-                    <p className="portfolio__achievement-text card-text mb-3">{props.description}</p>
-                    <a className="btn btn-outline-primary" title={"Accéder au site web du projet " + props.linkTitle} href={props.link} target="_blank" rel="noreferrer nofollow">Voir</a>     
+                    <p className="portfolio__achievement-text card-text mb-4">{props.description}</p>
+                    <div className='d-flex justify-content-evenly mb-3 gap-3'>
+                        <Link className="btn btn-outline-primary" title={"En savoir plus sur le projet " + props.linkTitle} to={props.projectLink}>En savoir plus</Link>
+                        <a className="btn btn-outline-primary" title={"Accéder au dépôt GitHub du projet " + props.linkTitle} href={props.githubLink} target="_blank" rel="noreferrer nofollow">Dépôt GitHub</a>
+                    </div>
+                    <a className="btn btn-outline-primary" title={"Accéder au site web du projet " + props.linkTitle} href={props.websiteLink} target="_blank" rel="noreferrer nofollow">Site</a>     
                 </div>
                 <p className="portfolio__achievement-text card-footer">{props.technology}</p>
             </article>
@@ -41,7 +48,9 @@ export default function Portfolio() {
                     title="Knowledge"
                     description="Réalisation d'une plateforme d'e-learning."
                     linkTitle="Knowledge"
-                    link="https://fb-lb.github.io/CEF_devoirs_knowledge-front/"
+                    projectLink="/projet/knowledge/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_knowledge-front"
+                    websiteLink="https://fb-lb.github.io/CEF_devoirs_knowledge-front/"
                     technology="Site réalisé avec Angular, Express et MySQL"
                 />
                 <Project
@@ -50,7 +59,9 @@ export default function Portfolio() {
                     title="Stubborn"
                     description="Réalisation d'une application e-commerce."
                     linkTitle="Stubborn"
-                    link="https://hyle.alwaysdata.net/"
+                    projectLink="/projet/stubborn/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_stubborn"
+                    websiteLink="https://hyle.alwaysdata.net/"
                     technology="Site réalisé avec Symfony (fullstack) et MySQL"
                 />
                 <Project
@@ -59,7 +70,9 @@ export default function Portfolio() {
                     title="Médiathèque"
                     description="Réalisation d'une application pour des réservations de médias."
                     linkTitle="Médiathèque"
-                    link="https://cef-devoirs-mediatheque.onrender.com/"
+                    projectLink="/projet/mediatheque/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_mediatheque"
+                    websiteLink="https://cef-devoirs-mediatheque.onrender.com/"
                     technology="Site réalisé avec Django et MySQL"
                 />
                 <Project
@@ -68,7 +81,9 @@ export default function Portfolio() {
                     title="Catway API"
                     description="Réalisation d'une API pour des réservations de quai d'amarrage dans un port."
                     linkTitle="Catway API"
-                    link="https://catway-api.onrender.com/"
+                    projectLink="/projet/catway-api/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_catway-api"
+                    websiteLink="https://catway-api.onrender.com/"
                     technology="Site réalisé avec Express et EJS (+ SwaggerHub)"
                 />
                 <Project
@@ -77,7 +92,9 @@ export default function Portfolio() {
                     title="Trouve ton artisan !"
                     description="Réalisation d'une plateforme pour trouver et contacter un artisan."
                     linkTitle="Trouve ton artisan !"
-                    link="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
+                    projectLink="/projet/trouve-ton-artisan/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_trouve-ton-artisan"
+                    websiteLink="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
                     technology="Site réalisé avec Angular (+ Tailwind CSS, Sentry, EmailJS)"
                 />
                 <Project
@@ -86,16 +103,31 @@ export default function Portfolio() {
                     title="Au Petit Village"
                     description="Réalisation du front-end d'une application e-commerce."
                     linkTitle="Au Petit Village"
-                    link="https://fb-lb.github.io/CEF_devoirs_au-petit-village/"
+                    projectLink="/projet/au-petit-village/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_au-petit-village"
+                    websiteLink="https://fb-lb.github.io/CEF_devoirs_au-petit-village/"
                     technology="Site réalisé avec Angular"
                 />
                 <Project
-                    srcImg="/assets/img/portfolio/portfolio.jpg"
-                    altImg="Screenshot du site du portfolio initial. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
-                    title="Portfolio initial"
+                    srcImg="/assets/img/portfolio/portfolio-2.jpg"
+                    altImg="Screenshot du site du portfolio actuel. On y voit en haut une illustration sombre d'un homme assis sur une chaise avec un casque et devant un écran d'ordinateur. En dessous à gauche, on voit le texte présent sur la page d'accueil du portfolio et à droite, la tête d'un homme de profil regardant vers la gauche."
+                    title="Portfolio actuel"
+                    description="Réalisation d'un vitrine."
+                    linkTitle="Portfolio actuel"
+                    projectLink="/projet/portfolio-2/"
+                    githubLink="https://github.com/fb-lb/fb-lb.github.io"
+                    websiteLink="https://fb-lb.github.io/"
+                    technology="Site réalisé avec React"
+                />
+                <Project
+                    srcImg="/assets/img/portfolio/portfolio-1.jpg"
+                    altImg="Screenshot du site du premier portfolio. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
+                    title="Premier portfolio"
                     description="Réalisation d'un site One Page."
-                    linkTitle="Portfolio initial"
-                    link="https://fb-lb.github.io/CEF_devoirs_portfolio/"
+                    linkTitle="premier Portfolio"
+                    projectLink="/projet/portfolio-1/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_portfolio"
+                    websiteLink="https://fb-lb.github.io/CEF_devoirs_portfolio/"
                     technology="Site réalisé avec Vue.js"
                 />
                 <Project
@@ -104,7 +136,9 @@ export default function Portfolio() {
                     title="Curriculum Vitæ"
                     description="Réalisation d'un CV en HTML et CSS."
                     linkTitle="CV"
-                    link="https://fb-lb.github.io/CEF_devoirs_cv/"
+                    projectLink="/projet/cv/"
+                    githubLink="https://github.com/fb-lb/CEF_devoirs_cv"
+                    websiteLink="https://fb-lb.github.io/CEF_devoirs_cv/"
                     technology="Site réalisé en HTML/CSS"
                 />
             </div>
