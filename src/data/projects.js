@@ -17,7 +17,7 @@ const projects = {
                 { type: "text", content: "Chaque partie et tout le fonctionnement du site est expliquée sur sa page d'accueil, vous pouvez accéder au site ainsi qu'au repository GitHub via les liens ci-dessous." },
             ],
             [
-                { type: "text", content: "LEs CRUD sont accès libre pour que vous puissiez les tester. Si besoin, je peux rétablir la base de données avec mes fixtures." },
+                { type: "text", content: "Les CRUD sont accès libre pour que vous puissiez les tester. Si besoin, je peux rétablir la base de données avec mes fixtures." },
             ],
         ],
         technologies: [
@@ -171,6 +171,44 @@ const projects = {
     },
     "trouve-ton-artisan": {
         name: "Trouve ton artisan !",
+        image: {
+            sourcePortrait: "/assets/img/project/trouve-ton-artisan/trouve-ton-artisan-portrait.webp",
+            sourceLandscape: "/assets/img/project/trouve-ton-artisan/trouve-ton-artisan-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet trouve ton artisan.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site \"Trouve ton artisan !\" est une plateforme de mise en relation entre particuliers et artisans." },
+            ],
+            [
+                { type: "text", content : "Il est possible de retrouver un artisan en sélectionnant une catégorie (Bâtiment, Services, Fabrication, Alimentation) ou via une barre de recherche." },
+            ],
+            [
+                { type: "text", content : "Chaque artisan possède une fiche de description avec un accès vers son site web ainsi qu'un formulaire de contact." },
+            ],
+            [
+                { type: "text", content : "Ici je me suis concentré sur la partie front-end de l'application. Il n'y a pas de back-end, les informations relatives aux artisans sont stockées dans un fichier json." },
+            ],
+        ],
+        technologies: [
+            "Angular",
+            "Tailwind CSS",
+            "EmailJS",
+            "Sentry",
+            "FontAwesome",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Front-end hébergé via GitHub Pages." },
+            ],
+            [
+                { type : "text", content : "Tous les noms d'entreprise, les e-mails et les sites web des artisans sont fictifs." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_trouve-ton-artisan",
+            website: "https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/",
+        }
     },
     "au-petit-village": {
         name: "Au petit village",
@@ -183,49 +221,6 @@ const projects = {
     },
     cv: {
         name: "CV",
-    },
-    test: {
-        name: "Test",
-        image: {
-            sourcePortrait: "/assets/img/project/knowledge/knowledge-portrait.webp",
-            sourceLandscape: "/assets/img/project/knowledge/knowledge-landscape.webp",
-            alternative: "une image",
-        },
-        descriptions: [
-            [
-                { type: "text", content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida lorem ante, hendrerit euismod ante feugiat in. Proin ut ante tempor, ullamcorper dolor vitae, interdum metus. Nam lobortis nisi id dui interdum laoreet sit amet sed lorem. Class aptent taciti sociosqu ad " },
-                { type : "link", content : "ceci est un lien", source: "", target: "" },
-                { type: "text", content : " litora torquent per conubia nostra, per inceptos himenaeos. Aenean diam quam, sodales at fermentum nec, aliquet et erat. Morbi volutpat pretium consequat. Nullam accumsan orci justo, et varius libero fringilla a. Phasellus maximus, mi at porttitor tincidunt, tortor turpis feugiat odio, in tincidunt lectus sem ut lorem." },
-            ],
-            [
-                { type: 'text', content: "Vestibulum aliquet mi hendrerit risus tempor egestas. Sed aliquet orci eu magna sagittis interdum eget aliquam tortor. Vestibulum scelerisque et massa quis accumsan. Etiam nunc est, pulvinar id lorem eget, laoreet tempus mauris. Nunc porttitor ornare ex, in dapibus neque sollicitudin luctus. Etiam consectetur efficitur consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus metus fringilla neque dignissim ultrices. Aenean semper laoreet leo nec bibendum." },
-            ],
-        ],
-        technologies: [
-            "Angular",
-            "Express",
-            "MariaDB",
-        ],
-        notes: [
-            [
-                { type: "text", content : "Début remarque 1 " },
-                { type : "link", content : "lien 1 remarque 1", source: "", target: "" },
-                { type: "text", content : " " },
-                { type : "link", content : "lien 2 remarque 1", source: "", target: "" },
-                { type : "text", content : " fin remarque 1" },
-            ],
-            [
-                { type : "text", content : "Début remarque 2 " },
-                { type : "link", content : "lien 1 remarque 2", source: "", target: "" },
-                { type: "text", content : " " },
-                { type : "link", content : "lien 2 remarque 2", source: "", target: "" },
-                { type : "text", content : " fin remarque 2" },
-            ],
-        ],
-        links: {
-            github: "https://github.com/fb-lb/CEF_devoirs_knowledge-front",
-            website: "https://fb-lb.github.io/CEF_devoirs_knowledge-front/",
-        }
     },
 }
 

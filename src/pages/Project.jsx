@@ -44,7 +44,7 @@ export default function Project() {
                                 })}
                         </section>
                         <section className="info__section technology">
-                            <h3 className="technology__title">Liste des technologies utilisées</h3>
+                            <h3 className="technology__title">Liste des technologies / services utilisées</h3>
                             <ul className="technology__list">
                                 {project.technologies.map((t, index) => (
                                     <li key={index} className="technology__item">{t}</li>
