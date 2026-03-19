@@ -277,6 +277,28 @@ const projects = {
     },
     "portfolio-1": {
         name: "premier Portfolio",
+        image: {
+            sourcePortrait: "/assets/img/project/portfolio-1/portfolio-1-portrait.webp",
+            sourceLandscape: "/assets/img/project/portfolio-1/portfolio-1-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet portfolio 1.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site du portfolio initial est un site One Page qui me permettait de présenter mes travaux en lien avec le développement web. Il a depuis été remplacé par le portfolio actuel, plus adapté à la présentation de mes projets web." },
+            ],
+        ],
+        technologies: [
+            "Vue.js",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Front-end hébergé via GitHub Pages." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_portfolio",
+            website: "https://fb-lb.github.io/CEF_devoirs_portfolio/",
+        }
     },
     cv: {
         name: "CV",
