@@ -212,6 +212,38 @@ const projects = {
     },
     "au-petit-village": {
         name: "Au petit village",
+        image: {
+            sourcePortrait: "/assets/img/project/au-petit-village/au-petit-village-portrait.webp",
+            sourceLandscape: "/assets/img/project/au-petit-village/au-petit-village-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet au petit village.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site \"Au petit village\" est la partie front-end d'un site e-commerce de figurines d'Astérix et Obélix." },
+            ],
+            [
+                { type: "text", content : "Sur la page d'accueil on peut voir toutes les figurines vendues. Il est possible de trier les figurines selon leur prix ou via une barre de recherche." },
+            ],
+            [
+                { type: "text", content : "Une fiche produit est disponible pour chacune des figurines avec une description et la possibilité de spécifier la quantité voulue avant d'ajouter au panier." },
+            ],
+            [
+                { type: "text", content : "En réalité il n'y a pas de panier sur cette application car je me suis focalisé sur la partie front-end. Il n'y a donc pas de back-end et les informations relatives aux figurines sont stockées dans un service Angular." },
+            ],
+        ],
+        technologies: [
+            "Angular",
+            "FontAwesome",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Front-end hébergé via GitHub Pages." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_au-petit-village",
+            website: "https://fb-lb.github.io/CEF_devoirs_au-petit-village/",
+        }
     },
     "portfolio-2": {
         name: "Portfolio actuel",
