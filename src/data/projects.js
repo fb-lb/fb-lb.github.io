@@ -4,25 +4,26 @@ const projects = {
         image: {
             sourcePortrait: "/assets/img/project/knowledge/knowledge-portrait.webp",
             sourceLandscape: "/assets/img/project/knowledge/knowledge-landscape.webp",
-            alternative: "une image",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet knowledge.",
         },
         descriptions: [
             [
                 { type: "text", content : "Le site Knowledge est une plateforme d'e-learning où il est possible de créer un compte, de simuler l'achat de cours (via une version sandbox du module de paiement Stripe). A partir de là, il est possible d'accéder aux cours 'achetés' et de valider les leçons au fur et à mesure." },
-                
-                
             ],
             [
-                { type: "text", content: "Par défaut l'identifiant et le mot de passe renseignés dans le formulaire de login permettent d'accéder à un compte administrateur (car c'est une version de présentation). Cet accès administrateur permet d'accéder à plusieurs interfaces back-offices qui sont des CRUD permettant de gérer les utilisateurs, les cours et les achats (= les accès que les utilisateurs ont à ces cours)." },
+                { type: "text", content: "Par défaut l'identifiant et le mot de passe renseignés dans le formulaire de connexion permettent d'accéder à un compte administrateur (car c'est une version de présentation). Cet accès administrateur permet d'accéder à plusieurs interfaces back-offices qui sont des CRUD permettant de gérer les utilisateurs, les cours et les achats (= les accès que les utilisateurs ont à ces cours)." },
             ],
             [
                 { type: "text", content: "Chaque partie et tout le fonctionnement du site est expliquée sur sa page d'accueil, vous pouvez accéder au site ainsi qu'au repository GitHub via les liens ci-dessous." },
+            ],
+            [
+                { type: "text", content: "LEs CRUD sont accès libre pour que vous puissiez les tester. Si besoin, je peux rétablir la base de données avec mes fixtures." },
             ],
         ],
         technologies: [
             "Angular",
             "Express (en TypeScript)",
-            "MySQL",
+            "MariaDB",
             "EmailJS",
             "Stripe",
             "FontAwesome",
@@ -40,7 +41,7 @@ const projects = {
             [
                 { type : "text", content : "Le back-end étant hébergé sur Render avec le plan gratuit. Cela implique qu'il est mis en veille après 5 minutes d'inactivité. Afin de profiter pleinement de l'expérience de l'application merci bien vouloir sortir le back-end de sa veille en cliquant " },
                 { type : "link", content : "ici", source: "https://knowledge-back-jrzv.onrender.com/", target: "_blank" },
-                { type: "text", content : " et d'attendre que la page affiche le message : \"Le back-end de l'application Knowledge est prêt à recevoir des requêtes.\" avant de vous rendre sur le front-end via le lien ci-dessous." },
+                { type: "text", content : " et d'attendre (1 à 2 minutes) que la page affiche le message : \"Le back-end de l'application Knowledge est prêt à recevoir des requêtes.\" avant de vous rendre sur le front-end via le lien ci-dessous." },
             ],
             [
                 { type: "text", content : "Le back-end de l'application est sur un repository différent de celui du front-end. Voici donc le lien vers " },
@@ -55,12 +56,118 @@ const projects = {
     },
     stubborn: {
         name: "Stubborn",
+        image: {
+            sourcePortrait: "/assets/img/project/stubborn/stubborn-portrait.webp",
+            sourceLandscape: "/assets/img/project/stubborn/stubborn-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet stubborn.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site Stubborn est un site e-commerce de sweat. Il est possible de créer un compte, de consulter la liste des sweats ainsi que les pages produits associées. Sur ces pages, on peut sélectionner la taille du sweat et l'ajouter à son panier. Ensuite on peut modifier son panier ou finaliser sa commande." },
+            ],
+            [
+                { type: "text", content: "Par défaut l'identifiant et le mot de passe renseignés dans le formulaire de connexion permettent d'accéder à un compte administrateur (car c'est une version de présentation). Cet accès administrateur permet d'accéder à l'interface back-office qui sont des CRUD permettant de gérer les sweats, on peut y modifier les informations relatives aux sweats comme la photo du sweat, son prix, le stock selon les tailles ainsi que le fait de l'afficher ou non sur la page d'accueil." },
+            ],
+            [
+                { type: "text", content: "N'hésitez pas à tester les CRUD de l'application, je possède des fixtures pour rétablir la base de données si besoin." },
+            ],
+        ],
+        technologies: [
+            "Symfony",
+            "Twig template",
+            "MariaDB",
+            "Stripe",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Application et base de données hébergées via Alwaysdata." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_stubborn",
+            website: "https://hyle.alwaysdata.net/",
+        }
     },
     mediatheque: {
         name: "Médiathèque",
+        image: {
+            sourcePortrait: "/assets/img/project/mediatheque/mediatheque-portrait.webp",
+            sourceLandscape: "/assets/img/project/mediatheque/mediatheque-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet médiathèque.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site de la Médiathèque est une plateforme de réservation de média (CD, DVD, livres, jeux de plateau). Ici je me suis concentré plutôt sur l'aspect back-end / contraintes métiers de l'application plutôt que sur la partie front-end." },
+            ],
+            [
+                { type: "text", content: "Sur le site, les emprunteurs peuvent consulter la liste des médias, voir s'ils sont disponibles ou non.\nQuant aux bibliothécaires, ils peuvent se connecter via la page de connexion (identifiant et mot de passe renseignés par défaut dans cette version de présentation). Une fois connectés, ils accèdent aux interfaces back-offices qui sont des CRUD permettant de gérer les médias, les emprunteurs et les emprunts." },
+            ],
+            [
+                { type: "text", content: "Il y a certaines conditions aux emprunts :\n- une personne ne peut emprunter que 3 médias à la fois,\n- un emprunt ne peut pas exéceder une semaine, si cela arrive, l'utilisateur est interdit d'emprunt tant qu'il n'a pas retourné le média en retard,\n- les jeux de plateau ne peuvent pas être empruntés." },
+            ],
+            [
+                { type: "text", content: "Vous pouvez accéder au site ainsi qu'au repository GitHub via les liens ci-dessous.\nN'hésitez pas utiliser les CRUD pour tester l'application, j'ai des fixtures pour rétablir la base de données si besoin." },
+            ],
+        ],
+        technologies: [
+            "Django",
+            "MariaDB",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Application hébergée via Render." },
+            ],
+            [
+                { type : "text", content : "Base de données hébergée via Aiven." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_mediatheque",
+            website: "https://cef-devoirs-mediatheque.onrender.com/",
+        }
     },
     "catway-api": {
         name: "Catway API",
+        image: {
+            sourcePortrait: "/assets/img/project/catway-api/catway-api-portrait.webp",
+            sourceLandscape: "/assets/img/project/catway-api/catway-api-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet catway api.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site du projet Catway-API est une plateforme de réservation de ponton d'amarrage dans un port." },
+            ],
+            [
+                { type: "text", content : "Ce site est réservé aux personnes travaillant à la capitainerie d'où l'interface de connexion (un nom d'utilisateur et un mot de passe sont renseignés par défaut pour cette version de présentation)." },
+            ],
+            [
+                { type: "text", content : "Une fois connecté, il est possible d'accéder au tableau de bord où l'on peut ajouter / modifier / supprimer des utilisateurs, des pontons d'amarrage (= catway) et les réservations. Il y a aussi des pages pour consulter la liste des pontons d'amarrage et la liste des réservations." },
+            ],
+            [
+                { type: "text", content : "N'hésitez pas à ajouter / modifier / supprimer des catways et des réservations. Des fixtures me permettent de rétablir la base de données si besoin." },
+            ],
+        ],
+        technologies: [
+            "Express",
+            "EJS Template",
+            "MongoDB",
+            "SwaggerHub",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Application hébergée via Render." },
+            ],
+            [
+                { type : "text", content : "Base de données hébergée via MongoDB Atlas." },
+            ],
+            [
+                { type : "text", content : "Lorsque vous arrivez sur le site, il faut laisser le temps (1 à 2 minutes) à l'application de sortir de sa veille (hébergement gratuit sur Render = mise en veille de l'application après 5 minutes d'inactivité)." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_catway-api/",
+            website: "https://catway-api.onrender.com/",
+        }
     },
     "trouve-ton-artisan": {
         name: "Trouve ton artisan !",
@@ -97,7 +204,7 @@ const projects = {
         technologies: [
             "Angular",
             "Express",
-            "MySQL",
+            "MariaDB",
         ],
         notes: [
             [

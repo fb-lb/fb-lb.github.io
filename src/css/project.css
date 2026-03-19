@@ -72,6 +72,7 @@ main {}
 
 .description__paragraph {
     text-align: center;
+    white-space: pre-line;
 }
 
 .description__link {

@@ -51,7 +51,7 @@ export default function Portfolio() {
                     projectLink="/projet/knowledge/"
                     githubLink="https://github.com/fb-lb/CEF_devoirs_knowledge-front"
                     websiteLink="https://fb-lb.github.io/CEF_devoirs_knowledge-front/"
-                    technology="Site réalisé avec Angular, Express et MySQL"
+                    technology="Site réalisé avec Angular, Express et MariaDB"
                 />
                 <Project
                     srcImg="/assets/img/portfolio/stubborn.jpg"
@@ -62,7 +62,7 @@ export default function Portfolio() {
                     projectLink="/projet/stubborn/"
                     githubLink="https://github.com/fb-lb/CEF_devoirs_stubborn"
                     websiteLink="https://hyle.alwaysdata.net/"
-                    technology="Site réalisé avec Symfony (fullstack) et MySQL"
+                    technology="Site réalisé avec Symfony (fullstack) et MariaDB"
                 />
                 <Project
                     srcImg="/assets/img/portfolio/mediatheque.jpg"
@@ -73,7 +73,7 @@ export default function Portfolio() {
                     projectLink="/projet/mediatheque/"
                     githubLink="https://github.com/fb-lb/CEF_devoirs_mediatheque"
                     websiteLink="https://cef-devoirs-mediatheque.onrender.com/"
-                    technology="Site réalisé avec Django et MySQL"
+                    technology="Site réalisé avec Django et MariaDB"
                 />
                 <Project
                     srcImg="/assets/img/portfolio/catway.jpg"
