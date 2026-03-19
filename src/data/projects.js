@@ -97,13 +97,16 @@ const projects = {
         },
         descriptions: [
             [
-                { type: "text", content : "Le site de la Médiathèque est une plateforme de réservation de média (CD, DVD, livres, jeux de plateau). Ici je me suis concentré plutôt sur l'aspect back-end / contraintes métiers de l'application plutôt que sur la partie front-end." },
+                { type: "text", content : "Le site de la Médiathèque est une plateforme de réservation de média (CD, DVD, livres, jeux de plateau)." },
             ],
             [
                 { type: "text", content: "Sur le site, les emprunteurs peuvent consulter la liste des médias, voir s'ils sont disponibles ou non.\nQuant aux bibliothécaires, ils peuvent se connecter via la page de connexion (identifiant et mot de passe renseignés par défaut dans cette version de présentation). Une fois connectés, ils accèdent aux interfaces back-offices qui sont des CRUD permettant de gérer les médias, les emprunteurs et les emprunts." },
             ],
             [
                 { type: "text", content: "Il y a certaines conditions aux emprunts :\n- une personne ne peut emprunter que 3 médias à la fois,\n- un emprunt ne peut pas exéceder une semaine, si cela arrive, l'utilisateur est interdit d'emprunt tant qu'il n'a pas retourné le média en retard,\n- les jeux de plateau ne peuvent pas être empruntés." },
+            ],
+            [
+                { type: "text", content: "Ici je me suis concentré plutôt sur l'aspect back-end / contraintes métiers de l'application plutôt que sur la partie front-end." },
             ],
             [
                 { type: "text", content: "Vous pouvez accéder au site ainsi qu'au repository GitHub via les liens ci-dessous.\nN'hésitez pas utiliser les CRUD pour tester l'application, j'ai des fixtures pour rétablir la base de données si besoin." },
@@ -187,7 +190,7 @@ const projects = {
                 { type: "text", content : "Chaque artisan possède une fiche de description avec un accès vers son site web ainsi qu'un formulaire de contact." },
             ],
             [
-                { type: "text", content : "Ici je me suis concentré sur la partie front-end de l'application. Il n'y a pas de back-end, les informations relatives aux artisans sont stockées dans un fichier json." },
+                { type: "text", content : "Ici je me suis concentré sur la partie front-end de l'application qui est une Single Page Application. Il n'y a pas de back-end, les informations relatives aux artisans sont stockées dans un fichier json." },
             ],
         ],
         technologies: [
@@ -219,7 +222,7 @@ const projects = {
         },
         descriptions: [
             [
-                { type: "text", content : "Le site \"Au petit village\" est la partie front-end d'un site e-commerce de figurines d'Astérix et Obélix." },
+                { type: "text", content : "Le site \"Au petit village\" est la partie front-end (en Single Page Application) d'un site e-commerce de figurines d'Astérix et Obélix." },
             ],
             [
                 { type: "text", content : "Sur la page d'accueil on peut voir toutes les figurines vendues. Il est possible de trier les figurines selon leur prix ou via une barre de recherche." },
@@ -247,6 +250,30 @@ const projects = {
     },
     "portfolio-2": {
         name: "Portfolio actuel",
+        image: {
+            sourcePortrait: "/assets/img/project/portfolio-2/portfolio-2-portrait.webp",
+            sourceLandscape: "/assets/img/project/portfolio-2/portfolio-2-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du projet portfolio 2.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site du portfolio actuel est le site sur lequel vous vous trouvez. Il s'agit uniquement d'une Single Page Application, les informations relatives aux projets sont présentes dans un fichier js." },
+            ],
+        ],
+        technologies: [
+            "React",
+            "Bootstrap",
+            "FontAwesome",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Front-end hébergé via GitHub Pages." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/fb-lb.github.io",
+            website: "https://fb-lb.github.io/",
+        }
     },
     "portfolio-1": {
         name: "premier Portfolio",
