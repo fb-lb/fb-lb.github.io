@@ -302,6 +302,32 @@ const projects = {
     },
     cv: {
         name: "CV",
+        image: {
+            sourcePortrait: "/assets/img/project/cv/cv-portrait.webp",
+            sourceLandscape: "/assets/img/project/cv/cv-landscape.webp",
+            alternative: "Capture d'écran de la page d'accueil du site web du curriculum vitae.",
+        },
+        descriptions: [
+            [
+                { type: "text", content : "Le site de mon CV représente mon premier projet HTML/CSS." },
+            ],
+        ],
+        technologies: [
+            "HTML5",
+            "CSS3",
+        ],
+        notes: [
+            [
+                { type : "text", content : "Front-end hébergé via GitHub Pages." },
+            ],
+            [
+                { type : "text", content : "Merci de ne pas prendre en compte les informations présentes sur ce projet et de vous référer au CV que je vous ai transmis par mail." },
+            ],
+        ],
+        links: {
+            github: "https://github.com/fb-lb/CEF_devoirs_cv",
+            website: "https://fb-lb.github.io/CEF_devoirs_cv/",
+        }
     },
 }
 
