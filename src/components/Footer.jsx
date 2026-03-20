@@ -20,7 +20,8 @@ export default function Footer() {
               {user.address.postalCode} {user.address.city},{" "}
               {user.address.country}
             </p>
-            <p>Téléphone : {user.phone.join(" ")}</p>
+            <p>Téléphone : <a href={"tel:" + user.internationalPhone.join("")}>{user.phone.join(" ")}</a></p>
+            <p>Mail : <a href={"mailto:" + user.mail}>{user.mail}</a></p>
           </address>
           <div className="footer__social-networks">
             <a

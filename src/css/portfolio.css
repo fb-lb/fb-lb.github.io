@@ -14,6 +14,10 @@
     font-size: 1.1rem;
 }
 
+.portoflio__principal-text.portoflio__principal-text--strong {
+    padding: 0;
+}
+
 .portfolio__line {
     border-bottom: solid 4px #0d6efd;
     margin: 15px 39% 55px 39%;
@@ -27,11 +31,27 @@
     padding: 0 12px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .portfolio__banner {
         height: 82px;
         background: url("/assets/img/banner-tablette.jpg") no-repeat bottom;
         background-size: cover;
+    }
+
+    .portfolio__achievement-list {
+        padding: 0 3%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .portfolio__banner {
+        height: 82px;
+        background: url("/assets/img/banner-tablette.jpg") no-repeat bottom;
+        background-size: cover;
+    }
+
+    .portfolio__achievement-list {
+        padding: 0 10%;
     }
 }
 
@@ -52,6 +72,10 @@
 
     .portfolio__achievement-list {
         padding: 0 45px;
+    }
+
+    .portfolio__achievement {
+        display: flex;
     }
 
     .portfolio__achievement-title {
@@ -80,6 +104,10 @@
 
     .portfolio__achievement-list {
         padding: 0 61px;
+    }
+
+    .portfolio__achievement {
+        display: flex;
     }
 
     .portfolio__achievement-title {

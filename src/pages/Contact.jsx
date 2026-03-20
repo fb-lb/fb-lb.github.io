@@ -47,7 +47,7 @@ export default function Contact() {
             <div className='contact__filter'>
                 <div className='contact__content'>
                     <h1 className='contact__title text-uppercase'>Me contacter</h1>
-                    <p className='contact__text'>Pour me contacter en vue d&apos;un entretien ou d&apos;une future collaboration, merci de remplir le formulaire de contact.</p>
+                    <p className='contact__text'>Pour me contacter en vue d&apos;un entretien, d&apos;une future collaboration ou pour toute information, merci de remplir le formulaire de contact ou d&apos;utiliser l&apos;adresse mail ci-dessous.</p>
                     <div className='contact__line'></div>
                     <div className='contact__block-sections'>
                         <section className='block-form'>
@@ -64,8 +64,9 @@ export default function Contact() {
                         <section className='block-address'>
                             <h2 className='block-address__title'>Mes coordonnées</h2>
                             <address className='block-address__address'>
-                                <p className='block-address__address-text'><i className="fa-solid fa-location-dot" style={{color: '#444444'}}></i> {user.address.number} {user.address.street}, {user.address.postalCode} {user.address.city}, {user.address.country}</p>
-                                <p className='block-address__address-text'><i className="fa-solid fa-mobile-screen-button" style={{color: '#444444'}}></i> {user.phone.join(' ')}</p>
+                                <p className='block-address__address-text'><i className="fa-solid fa-location-dot" style={{color: '#444444'}}></i> <a className='text-decoration-none' href={user.googleMapLink} target="_blank" rel="noopener noreferrer">{user.address.number} {user.address.street}, {user.address.postalCode} {user.address.city}, {user.address.country}</a></p>
+                                <p className='block-address__address-text'><i className="fa-solid fa-mobile-screen-button" style={{color: '#444444'}}></i> <a className='text-decoration-none' href={"tel:" + user.internationalPhone.join('')}>{user.phone.join(' ')}</a></p>
+                                <p className='block-address__address-text'><i className="fa-solid fa-envelope" style={{color: '#444444'}}></i> <a className='text-decoration-none' href={"mailto:" + user.mail}>{user.mail}</a></p>
                                 <iframe className='block-address__map' src={user.iframeMapLink} width="100%" height="300" style={{border:'0'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </address>
                         </section>

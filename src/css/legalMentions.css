@@ -24,6 +24,7 @@
 .legal-mentions__item-address {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .legal-mentions__item-link {

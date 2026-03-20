@@ -15,9 +15,9 @@ export default function LegalMentions() {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <h3 className='legal-mentions__item-title'>{user.firstName} {user.lastName}</h3>
+                            <h3 className='legal-mentions__item-title mb-3'>{user.firstName} {user.lastName}</h3>
                             <address className='legal-mentions__item-address'>
-                                <p><i className="fa-solid fa-location-dot" style={{color: '#000000'}}></i> {user.address.number} {user.address.street}<br/>{user.address.postalCode}, {user.address.country}</p>
+                                <p><i className="fa-solid fa-location-dot" style={{color: '#000000'}}></i> <a className='legal-mentions__item-link' href={user.googleMapLink} target="_blank" rel="noopener noreferrer">{user.address.number} {user.address.street} {user.address.postalCode}, {user.address.country}</a></p>
                                 <a className='legal-mentions__item-link' href='tel:+33620304050'><i className="fa-solid fa-mobile-screen-button" style={{color: '#000000'}}></i> {user.phone.join(" ")}</a>
                                 <a className='legal-mentions__item-link' href='mailto:john.doe@gmail.com'><i className="fa-solid fa-envelope" style={{color: '#000000'}}></i> {user.mail}</a>
                             </address>
@@ -32,7 +32,7 @@ export default function LegalMentions() {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <h3 className='legal-mentions__item-title'>Site hébergé via la plateforme GitHub Pages, service fourni par GitHub, Inc.</h3>
+                            <h3 className='legal-mentions__item-title mb-3'>Site hébergé via la plateforme GitHub Pages, service fourni par GitHub, Inc.</h3>
                             <address>88 Colin P Kelly Jr St<br/>San Francisco, CA 94107<br/>États-Unis</address>
                             <a className='legal-mentions__item-link' href="https://www.alwaysdata.com/fr/" target='_blank' rel="noreferrer nofollow"><i className="fa-solid fa-globe" style={{color: '#000000'}}></i> https://github.com/</a>
                         </div>
@@ -46,8 +46,8 @@ export default function LegalMentions() {
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <h3 className='legal-mentions__item-title'>Crédits</h3>
-                            <p className='legal-mentions__item-text'>Site développé par {user.firstName} {user.lastName}, étudiant du CEF.</p>
+                            <h3 className='legal-mentions__item-title mb-3'>Crédits</h3>
+                            <p className='legal-mentions__item-text'>Site développé par {user.firstName} {user.lastName}, étudiant du CEF (Centre Européen de Formation).</p>
                             <p className='legal-mentions__item-text'>Les images libres de droits sont issues du site <a className='legal-mentions__item-link' href="https://pixabay.com/fr/" target='_blank' rel="noreferrer nofollow">Pixabay</a>.</p>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/home.css';
 import user from '../data/user';
 
@@ -8,7 +9,7 @@ export default function Home() {
                 <div className='principal__filter'>
                     <h1 className='principal__h1'>Bonjour, je suis {user.firstName} {user.lastName}</h1>
                     <h2 className='principal__h2'>Développeur web full stack</h2>
-                    <a href='#about' className="principal__link btn btn-primary">En savoir plus</a>
+                    <Link to='/#about' className="principal__link btn btn-primary">En savoir plus</Link>
                 </div>
             </div>
             <div className='about'>

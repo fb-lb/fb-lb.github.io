@@ -8,7 +8,9 @@ const user = {
     city: "Gévezé",
     country: "France",
   },
+  googleMapLink: "https://www.google.com/maps/place/17+All.+Madame+de+S%C3%A9vign%C3%A9,+35850+G%C3%A9vez%C3%A9/@48.225732,-1.8039532,17z/data=!3m1!4b1!4m6!3m5!1s0x480eef580442ee85:0x94577c462c8b58ec!8m2!3d48.2257285!4d-1.8013783!16s%2Fg%2F11cpflgdl9?hl=fr&entry=ttu&g_ep=EgoyMDI2MDMxNy4wIKXMDSoASAFQAw%3D%3D",
   phone: ["06", "71", "23", "16", "52"],
+  internationalPhone: ["+33", "6", "71", "23", "16", "52"],
   mail: "fb.lubre@gmail.com",
   accounts: {
     github: "https://github.com/fb-lb/",

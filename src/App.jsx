@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Project from './pages/Project.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 export default function App() { 
 
@@ -31,18 +32,11 @@ export default function App() {
       } else if (location.pathname != "/mentions-legales/" && robots != null) {
         robots.remove();
       } 
-
-      // Go to url hash
-      if (location.hash) {
-        const el = document.getElementById(location.hash.slice(1));
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
   }, [location]);
 
   return (
     <>
+      <ScrollToTop/>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
