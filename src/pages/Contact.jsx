@@ -1,5 +1,6 @@
 import '../css/contact.css';
 import { useState } from 'react';
+import user from '../data/user';
 
 export default function Contact() {
 
@@ -63,9 +64,9 @@ export default function Contact() {
                         <section className='block-address'>
                             <h2 className='block-address__title'>Mes coordonnées</h2>
                             <address className='block-address__address'>
-                                <p className='block-address__address-text'><i className="fa-solid fa-location-dot" style={{color: '#444444'}}></i> 40 Rue Laure Diebold, 69009 Lyon, France</p>
-                                <p className='block-address__address-text'><i className="fa-solid fa-mobile-screen-button" style={{color: '#444444'}}></i> 06 20 30 40 50</p>
-                                <iframe className='block-address__map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6271524621784!2d4.7964039754028995!3d45.77866197108082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb65edac5b3f%3A0xe01c47049cb2e2b9!2s40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1724658749449!5m2!1sfr!2sfr" width="100%" height="300" style={{border:'0'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                <p className='block-address__address-text'><i className="fa-solid fa-location-dot" style={{color: '#444444'}}></i> {user.address.number} {user.address.street}, {user.address.postalCode} {user.address.city}, {user.address.country}</p>
+                                <p className='block-address__address-text'><i className="fa-solid fa-mobile-screen-button" style={{color: '#444444'}}></i> {user.phone.join(' ')}</p>
+                                <iframe className='block-address__map' src={user.iframeMapLink} width="100%" height="300" style={{border:'0'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </address>
                         </section>
                     </div>

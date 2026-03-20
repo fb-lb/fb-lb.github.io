@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
-import Services from './pages/Services.jsx';
+// import Services from './pages/Services.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Contact from './pages/Contact.jsx';
 import LegalMentions from './pages/LegalMentions.jsx';
@@ -46,7 +46,7 @@ export default function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/services/" element={<Services/>}></Route>
+        {/* <Route path="/services/" element={<Services/>}></Route> */}
         <Route path="/portfolio/" element={<Portfolio/>}></Route>
         <Route path="/projet/:projectSlug" element={<Project/>}></Route>
         <Route path="/contact/" element={<Contact/>}></Route>
