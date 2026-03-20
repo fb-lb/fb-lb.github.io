@@ -18,13 +18,13 @@ export default function Project() {
                 <div className='project__line'></div>
                 <div className='project__container'>
                     <picture className="project__picture">
-                        <source srcSet={project.image.sourcePortrait} media="(min-width: 993px)"/>
-                        <img className="project__image" src={project.image.sourceLandscape} alt={project.image.alternative}/>
+                        <source srcSet={project.projectImage.sourcePortrait} media="(min-width: 993px)"/>
+                        <img className="project__image" src={project.projectImage.sourceLandscape} alt={project.projectImage.alternative}/>
                     </picture>
                     <section className="project__info"> 
                         <section className="info__section description">
                             <h2 className="description__title">Description</h2>
-                                {project.descriptions.map((d, index) => {
+                                {project.longDescription.map((d, index) => {
                                     const contents = [];
                                 for (let i=0; i<d.length; i++) {
                                     if (d[i].type === 'text') contents.push(d[i].content);

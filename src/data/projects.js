@@ -1,12 +1,18 @@
 const projects = {
     knowledge: {
         name: "Knowledge",
-        image: {
+        slug: "knowledge",
+        projectImage: {
             sourcePortrait: "/assets/img/project/knowledge/knowledge-portrait.webp",
             sourceLandscape: "/assets/img/project/knowledge/knowledge-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet knowledge.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/knowledge.jpg",
+            alternative: "Screenshot du site knowledge. On y voit en haut l'en-tête sur fond bleu clair avec le logo de l'entreprise dans la partie supérieure et le menu de navigation sur la partie basse. Sous l'en-tête, on peut voir le texte du contenu de la page d'accueil.",
+        },
+        shortDescription: "Réalisation d'une plateforme d'e-learning.",
+        longDescription: [
             [
                 { type: "text", content : "Le site Knowledge est une plateforme d'e-learning où il est possible de créer un compte, de simuler l'achat de cours (via une version sandbox du module de paiement Stripe). A partir de là, il est possible d'accéder aux cours 'achetés' et de valider les leçons au fur et à mesure." },
             ],
@@ -20,6 +26,7 @@ const projects = {
                 { type: "text", content: "Les CRUD sont accès libre pour que vous puissiez les tester. Si besoin, je peux rétablir la base de données avec mes fixtures." },
             ],
         ],
+        stack : ["Angular", "Express (TS)", "MariaDB"],
         technologies: [
             "Angular",
             "Express (en TypeScript)",
@@ -56,12 +63,18 @@ const projects = {
     },
     stubborn: {
         name: "Stubborn",
-        image: {
+        slug: "stubborn",
+        projectImage: {
             sourcePortrait: "/assets/img/project/stubborn/stubborn-portrait.webp",
             sourceLandscape: "/assets/img/project/stubborn/stubborn-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet stubborn.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/stubborn.jpg",
+            alternative: "Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil.",
+        },
+        shortDescription: "Réalisation d'une application e-commerce.",
+        longDescription: [
             [
                 { type: "text", content : "Le site Stubborn est un site e-commerce de sweat. Il est possible de créer un compte, de consulter la liste des sweats ainsi que les pages produits associées. Sur ces pages, on peut sélectionner la taille du sweat et l'ajouter à son panier. Ensuite on peut modifier son panier ou finaliser sa commande." },
             ],
@@ -72,6 +85,7 @@ const projects = {
                 { type: "text", content: "N'hésitez pas à tester les CRUD de l'application, je possède des fixtures pour rétablir la base de données si besoin." },
             ],
         ],
+        stack : ["Symfony", "MariaDB"],
         technologies: [
             "Symfony",
             "Twig template",
@@ -90,28 +104,41 @@ const projects = {
     },
     mediatheque: {
         name: "Médiathèque",
-        image: {
+        slug: "mediatheque",
+        projectImage: {
             sourcePortrait: "/assets/img/project/mediatheque/mediatheque-portrait.webp",
             sourceLandscape: "/assets/img/project/mediatheque/mediatheque-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet médiathèque.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/mediatheque.jpg",
+            alternative: "Screenshot du site de la médiathèque. On y voit le texte présent sur la page d'accueil.",
+        },
+        shortDescription: "Réalisation d'une application pour des réservations de médias.",
+        longDescription: [
             [
                 { type: "text", content : "Le site de la Médiathèque est une plateforme de réservation de média (CD, DVD, livres, jeux de plateau)." },
             ],
             [
-                { type: "text", content: "Sur le site, les emprunteurs peuvent consulter la liste des médias, voir s'ils sont disponibles ou non.\nQuant aux bibliothécaires, ils peuvent se connecter via la page de connexion (identifiant et mot de passe renseignés par défaut dans cette version de présentation). Une fois connectés, ils accèdent aux interfaces back-offices qui sont des CRUD permettant de gérer les médias, les emprunteurs et les emprunts." },
+                { type: "text", content: "Sur le site, les emprunteurs peuvent consulter la liste des médias, voir s'ils sont disponibles ou non." },
             ],
             [
-                { type: "text", content: "Il y a certaines conditions aux emprunts :\n- une personne ne peut emprunter que 3 médias à la fois,\n- un emprunt ne peut pas exéceder une semaine, si cela arrive, l'utilisateur est interdit d'emprunt tant qu'il n'a pas retourné le média en retard,\n- les jeux de plateau ne peuvent pas être empruntés." },
+                { type: "text", content: "Quant aux bibliothécaires, ils peuvent se connecter via la page de connexion (identifiant et mot de passe renseignés par défaut dans cette version de présentation). Une fois connectés, ils accèdent aux interfaces back-offices qui sont des CRUD permettant de gérer les médias, les emprunteurs et les emprunts." },
+            ],
+            [
+                { type: "text", content: "Il y a certaines conditions aux emprunts :\n- une personne ne peut emprunter que 3 médias à la fois,\n- un emprunt ne peut pas excéder une semaine, si cela arrive, l'utilisateur est interdit d'emprunt tant qu'il n'a pas retourné le média en retard,\n- les jeux de plateau ne peuvent pas être empruntés." },
             ],
             [
                 { type: "text", content: "Ici je me suis concentré plutôt sur l'aspect back-end / contraintes métiers de l'application plutôt que sur la partie front-end." },
             ],
             [
-                { type: "text", content: "Vous pouvez accéder au site ainsi qu'au repository GitHub via les liens ci-dessous.\nN'hésitez pas utiliser les CRUD pour tester l'application, j'ai des fixtures pour rétablir la base de données si besoin." },
+                { type: "text", content: "Vous pouvez accéder au site ainsi qu'au repository GitHub via les liens ci-dessous." },
+            ],
+            [
+                { type: "text", content: "N'hésitez pas à utiliser les CRUD pour tester l'application, j'ai des fixtures pour rétablir la base de données si besoin." },
             ],
         ],
+        stack : ["Django", "MariaDB"],
         technologies: [
             "Django",
             "MariaDB",
@@ -131,12 +158,18 @@ const projects = {
     },
     "catway-api": {
         name: "Catway API",
-        image: {
+        slug: "catway-api",
+        projectImage: {
             sourcePortrait: "/assets/img/project/catway-api/catway-api-portrait.webp",
             sourceLandscape: "/assets/img/project/catway-api/catway-api-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet catway api.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/catway.jpg",
+            alternative: "Screenshot du site catway. On y voit le texte présent sur la page d'accueil.",
+        },
+        shortDescription: "Réalisation d'une API pour des réservations de quai d'amarrage dans un port.",
+        longDescription: [
             [
                 { type: "text", content : "Le site du projet Catway-API est une plateforme de réservation de ponton d'amarrage dans un port." },
             ],
@@ -150,6 +183,7 @@ const projects = {
                 { type: "text", content : "N'hésitez pas à ajouter / modifier / supprimer des catways et des réservations. Des fixtures me permettent de rétablir la base de données si besoin." },
             ],
         ],
+        stack : ["Express", "EJS Template"],
         technologies: [
             "Express",
             "EJS Template",
@@ -174,12 +208,18 @@ const projects = {
     },
     "trouve-ton-artisan": {
         name: "Trouve ton artisan !",
-        image: {
+        slug: "trouve-ton-artisan",
+        projectImage: {
             sourcePortrait: "/assets/img/project/trouve-ton-artisan/trouve-ton-artisan-portrait.webp",
             sourceLandscape: "/assets/img/project/trouve-ton-artisan/trouve-ton-artisan-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet trouve ton artisan.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/trouve-ton-artisan.jpg",
+            alternative: "Screenshot du site Trouve ton artisan. On y voit en haut l'en-tête contenant une barre de recherche et les différentes catégories des artisans. Sous l'en-tête, on peut voir la photo d'un paysage avec un lac au premier plan et des montagnes au second plan. Sous l'image il y a un schéma des étapes pour trouver son artisan sur le site.",
+        },
+        shortDescription: "Réalisation d'une plateforme de mise en relation entre artisans et particuliers.",
+        longDescription: [
             [
                 { type: "text", content : "Le site \"Trouve ton artisan !\" est une plateforme de mise en relation entre particuliers et artisans." },
             ],
@@ -193,6 +233,7 @@ const projects = {
                 { type: "text", content : "Ici je me suis concentré sur la partie front-end de l'application qui est une Single Page Application. Il n'y a pas de back-end, les informations relatives aux artisans sont stockées dans un fichier json." },
             ],
         ],
+        stack : ["Angular"],
         technologies: [
             "Angular",
             "Tailwind CSS",
@@ -215,12 +256,18 @@ const projects = {
     },
     "au-petit-village": {
         name: "Au petit village",
-        image: {
+        slug: "au-petit-village",
+        projectImage: {
             sourcePortrait: "/assets/img/project/au-petit-village/au-petit-village-portrait.webp",
             sourceLandscape: "/assets/img/project/au-petit-village/au-petit-village-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet au petit village.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/au-petit-village.jpg",
+            alternative: "Screenshot du site au petit village. On y voit de haut en bas le logo du site, la phrase d'accueil du site, les personnages du village d'Astérix. En-dessous à gauche, il y a un texte et à droite une image du village d'Astérix entourée d'un halo vert.",
+        },
+        shortDescription: "Réalisation du front-end d'une application e-commerce.",
+        longDescription: [
             [
                 { type: "text", content : "Le site \"Au petit village\" est la partie front-end (en Single Page Application) d'un site e-commerce de figurines d'Astérix et Obélix." },
             ],
@@ -234,6 +281,7 @@ const projects = {
                 { type: "text", content : "En réalité il n'y a pas de panier sur cette application car je me suis focalisé sur la partie front-end. Il n'y a donc pas de back-end et les informations relatives aux figurines sont stockées dans un service Angular." },
             ],
         ],
+        stack : ["Angular"],
         technologies: [
             "Angular",
             "FontAwesome",
@@ -250,16 +298,23 @@ const projects = {
     },
     "portfolio-2": {
         name: "Portfolio actuel",
-        image: {
+        slug: "portfolio-2",
+        projectImage: {
             sourcePortrait: "/assets/img/project/portfolio-2/portfolio-2-portrait.webp",
             sourceLandscape: "/assets/img/project/portfolio-2/portfolio-2-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet portfolio 2.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/portfolio-2.jpg",
+            alternative: "Screenshot du site du portfolio actuel. On y voit en haut une illustration sombre d'un homme assis sur une chaise avec un casque et devant un écran d'ordinateur. En dessous à gauche, on voit le texte présent sur la page d'accueil du portfolio et à droite, la tête d'un homme de profil regardant vers la gauche.",
+        },
+        shortDescription: "Réalisation d'un site vitrine.",
+        longDescription: [
             [
                 { type: "text", content : "Le site du portfolio actuel est le site sur lequel vous vous trouvez. Il s'agit uniquement d'une Single Page Application, les informations relatives aux projets sont présentes dans un fichier js." },
             ],
         ],
+        stack : ["React"],
         technologies: [
             "React",
             "Bootstrap",
@@ -276,17 +331,24 @@ const projects = {
         }
     },
     "portfolio-1": {
-        name: "premier Portfolio",
-        image: {
+        name: "Premier Portfolio",
+        slug: "portfolio-1",
+        projectImage: {
             sourcePortrait: "/assets/img/project/portfolio-1/portfolio-1-portrait.webp",
             sourceLandscape: "/assets/img/project/portfolio-1/portfolio-1-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du projet portfolio 1.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/portfolio-1.jpg",
+            alternative: "Screenshot du site du premier portfolio. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues.",
+        },
+        shortDescription: "Réalisation d'un site One Page.",
+        longDescription: [
             [
                 { type: "text", content : "Le site du portfolio initial est un site One Page qui me permettait de présenter mes travaux en lien avec le développement web. Il a depuis été remplacé par le portfolio actuel, plus adapté à la présentation de mes projets web." },
             ],
         ],
+        stack : ["Vue.js"],
         technologies: [
             "Vue.js",
         ],
@@ -301,17 +363,24 @@ const projects = {
         }
     },
     cv: {
-        name: "CV",
-        image: {
+        name: "Curriculum Vitæ",
+        slug: "cv",
+        projectImage: {
             sourcePortrait: "/assets/img/project/cv/cv-portrait.webp",
             sourceLandscape: "/assets/img/project/cv/cv-landscape.webp",
             alternative: "Capture d'écran de la page d'accueil du site web du curriculum vitae.",
         },
-        descriptions: [
+        portfolioImage: {
+            source: "/assets/img/portfolio/cv.jpg",
+            alternative: "Screenshot du site contenant le CV. On y voit une photo d'un homme brun. Les couleurs du fonds sont blanc et rouge.",
+        },
+        shortDescription: "Réalisation d'un CV en HTML et CSS.",
+        longDescription: [
             [
                 { type: "text", content : "Le site de mon CV représente mon premier projet HTML/CSS." },
             ],
         ],
+        stack : ["HTML5", "CSS3"],
         technologies: [
             "HTML5",
             "CSS3",

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/portfolio.css';
 import { PropTypes } from 'prop-types';
+import projects from '../data/projects';
 
 Project.propTypes = {
     srcImg: PropTypes.string,
@@ -11,7 +12,7 @@ Project.propTypes = {
     projectLink: PropTypes.string,
     githubLink: PropTypes.string,
     websiteLink: PropTypes.string,
-    technology: PropTypes.string
+    stack: PropTypes.string
   };
 
 function Project(props) {
@@ -28,11 +29,13 @@ function Project(props) {
                     </div>
                     <a className="btn btn-outline-primary" title={"Accéder au site web du projet " + props.linkTitle} href={props.websiteLink} target="_blank" rel="noreferrer nofollow">Site</a>     
                 </div>
-                <p className="portfolio__achievement-text card-footer">{props.technology}</p>
+                <p className="portfolio__achievement-text card-footer"><strong>Stack principale</strong><br/>{props.stack}</p>
             </article>
         </div>
     ); 
 }
+
+const projectsArray = Object.entries(projects);
 
 export default function Portfolio() {
     return (
@@ -42,105 +45,20 @@ export default function Portfolio() {
             <p className='portoflio__principal-text'>Voici quelques-unes de mes réalisations.</p>
             <div className='portfolio__line'></div>
             <div className='portfolio__achievement-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
-                <Project
-                    srcImg="/assets/img/portfolio/knowledge.jpg"
-                    altImg="Screenshot du site knowledge. On y voit en haut l'en-tête sur fond bleu clair avec le logo de l'entreprise dans la partie supérieure et le menu de navigation sur la partie basse. Sous l'en-tête, on peut voir le texte du contenu de la page d'accueil."
-                    title="Knowledge"
-                    description="Réalisation d'une plateforme d'e-learning."
-                    linkTitle="Knowledge"
-                    projectLink="/projet/knowledge/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_knowledge-front"
-                    websiteLink="https://fb-lb.github.io/CEF_devoirs_knowledge-front/"
-                    technology="Site réalisé avec Angular, Express et MariaDB"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/stubborn.jpg"
-                    altImg="Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
-                    title="Stubborn"
-                    description="Réalisation d'une application e-commerce."
-                    linkTitle="Stubborn"
-                    projectLink="/projet/stubborn/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_stubborn"
-                    websiteLink="https://hyle.alwaysdata.net/"
-                    technology="Site réalisé avec Symfony (fullstack) et MariaDB"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/mediatheque.jpg"
-                    altImg="Screenshot du site de la médiathèque. On y voit le texte présent sur la page d'accueil."
-                    title="Médiathèque"
-                    description="Réalisation d'une application pour des réservations de médias."
-                    linkTitle="Médiathèque"
-                    projectLink="/projet/mediatheque/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_mediatheque"
-                    websiteLink="https://cef-devoirs-mediatheque.onrender.com/"
-                    technology="Site réalisé avec Django et MariaDB"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/catway.jpg"
-                    altImg="Screenshot du site catway. On y voit le texte présent sur la page d'accueil."
-                    title="Catway API"
-                    description="Réalisation d'une API pour des réservations de quai d'amarrage dans un port."
-                    linkTitle="Catway API"
-                    projectLink="/projet/catway-api/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_catway-api"
-                    websiteLink="https://catway-api.onrender.com/"
-                    technology="Site réalisé avec Express et EJS (+ SwaggerHub)"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/trouve-ton-artisan.jpg"
-                    altImg="Screenshot du site Trouve ton artisan. On y voit en haut l'en-tête contenant une barre de recherche et les différentes catégories des artisans. Sous l'en-tête, on peut voir la photo d'un paysage avec un lac au premier plan et des montagnes au second plan. Sous l'image il y a un schéma des étapes pour trouver son artisan sur le site."
-                    title="Trouve ton artisan !"
-                    description="Réalisation d'une plateforme pour trouver et contacter un artisan."
-                    linkTitle="Trouve ton artisan !"
-                    projectLink="/projet/trouve-ton-artisan/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_trouve-ton-artisan"
-                    websiteLink="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
-                    technology="Site réalisé avec Angular (+ Tailwind CSS, Sentry, EmailJS)"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/au-petit-village.jpg"
-                    altImg="Screenshot du site au petit village. On y voit de haut en bas le logo du site, la phrase d'accueil du site, les personnages du village d'Astérix. En-dessous à gauche, il y a un texte et à droite une image du village d'Astérix entourée d'un halo vert."
-                    title="Au Petit Village"
-                    description="Réalisation du front-end d'une application e-commerce."
-                    linkTitle="Au Petit Village"
-                    projectLink="/projet/au-petit-village/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_au-petit-village"
-                    websiteLink="https://fb-lb.github.io/CEF_devoirs_au-petit-village/"
-                    technology="Site réalisé avec Angular"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/portfolio-2.jpg"
-                    altImg="Screenshot du site du portfolio actuel. On y voit en haut une illustration sombre d'un homme assis sur une chaise avec un casque et devant un écran d'ordinateur. En dessous à gauche, on voit le texte présent sur la page d'accueil du portfolio et à droite, la tête d'un homme de profil regardant vers la gauche."
-                    title="Portfolio actuel"
-                    description="Réalisation d'un vitrine."
-                    linkTitle="Portfolio actuel"
-                    projectLink="/projet/portfolio-2/"
-                    githubLink="https://github.com/fb-lb/fb-lb.github.io"
-                    websiteLink="https://fb-lb.github.io/"
-                    technology="Site réalisé avec React"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/portfolio-1.jpg"
-                    altImg="Screenshot du site du premier portfolio. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
-                    title="Premier portfolio"
-                    description="Réalisation d'un site One Page."
-                    linkTitle="premier Portfolio"
-                    projectLink="/projet/portfolio-1/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_portfolio"
-                    websiteLink="https://fb-lb.github.io/CEF_devoirs_portfolio/"
-                    technology="Site réalisé avec Vue.js"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/cv.jpg"
-                    altImg="Screenshot du site contenant le CV. On y voit une photo d'un homme brun. Les couleurs du fonds sont blanc et rouge."
-                    title="Curriculum Vitæ"
-                    description="Réalisation d'un CV en HTML et CSS."
-                    linkTitle="CV"
-                    projectLink="/projet/cv/"
-                    githubLink="https://github.com/fb-lb/CEF_devoirs_cv"
-                    websiteLink="https://fb-lb.github.io/CEF_devoirs_cv/"
-                    technology="Site réalisé en HTML/CSS"
-                />
+                { projectsArray.map((project, index) => (
+                    <Project
+                        key={ index }
+                        srcImg={ project[1].portfolioImage.source }
+                        altImg={ project[1].portfolioImage.alternative }
+                        title={ project[1].name }
+                        description={ project[1].shortDescription }
+                        linkTitle={ project[1].name }
+                        projectLink={"/projet/" +  project[1].slug + "/"}
+                        githubLink={ project[1].links.github }
+                        websiteLink={ project[1].links.website }
+                        stack={ project[1].stack.join(' / ') }
+                    />
+                )) }
             </div>
         </main>
     );

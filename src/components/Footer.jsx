@@ -1,8 +1,10 @@
 import '../css/footer.css';
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import projects from '../data/projects';
 
 export default function Footer() {
+    const projectsArray = Object.entries(projects);
 
     // Retrieve information on GitHub profil
 
@@ -46,9 +48,9 @@ export default function Footer() {
                 <section>
                     <h4>Mes dernières réalisations</h4>
                     <ul className="footer__link-list fa-ul">
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Fresh food</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Restaurant Akira</Link></li>
-                        <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/portfolio/">Espace bien-être</Link></li>
+                        { projectsArray.slice(0, 5).map((project, index) => (
+                            <li key={index}><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to={ '/projet/' + project[1].slug }>{ project[1].name }</Link></li>
+                        )) }
                     </ul>
                 </section>
             </div>
