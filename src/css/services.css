@@ -21,7 +21,7 @@
 }
 
 .services__list {
-    display: flex;
+    display: grid;
 }
 
 .services__service {
@@ -49,11 +49,10 @@
 
 .services__underline-text {
     text-decoration: underline dotted;
-    text-transform: uppercase;
     text-underline-offset: 1.5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .services__banner {
         height: 82px;
         background: url("/assets/img/banner-tablette.jpg") no-repeat bottom;
@@ -61,9 +60,25 @@
     }
 
     .services__list {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 16px; 
         margin: 0 12px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .services__banner {
+        height: 82px;
+        background: url("/assets/img/banner-tablette.jpg") no-repeat bottom;
+        background-size: cover;
+    }
+
+    .services__list {
+        /* flex-direction: column; */
+        gap: 16px; 
+        margin: 0 12px;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -81,6 +96,7 @@
     .services__list {
         gap: 24px; 
         margin: 0 57px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .services__service {
@@ -102,6 +118,7 @@
     .services__list {
         gap: 24px; 
         margin: 0 73px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .services__service {

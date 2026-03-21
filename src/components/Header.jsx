@@ -36,8 +36,8 @@ export default function Header() {
     if (location.pathname === "/") {
       document.getElementById("home-link").className =
         "activeLink nav-link text-uppercase";
-      // } else if (location.pathname==='/services/') {
-      //     document.getElementById('services-link').className = 'activeLink nav-link text-uppercase';
+    } else if (location.pathname==='/services/') {
+        document.getElementById('services-link').className = 'activeLink nav-link text-uppercase';
     } else if (location.pathname === "/portfolio/") {
       document.getElementById("portfolio-link").className =
         "activeLink nav-link text-uppercase";
@@ -80,9 +80,9 @@ export default function Header() {
                   Accueil
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                            <Link id='services-link' className="nav-link text-white-50 text-uppercase link-light" to="/services/">Services</Link>
-                        </li> */}
+              <li className="nav-item">
+                 <Link id='services-link' className="nav-link text-white-50 text-uppercase link-light" to="/services/">Services</Link>
+              </li>
               <li className="nav-item">
                 <Link
                   id="portfolio-link"

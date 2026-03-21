@@ -64,7 +64,14 @@ export default function Footer() {
                 A propos
               </Link>
             </li>
-            {/* <li><span className="footer__icon-list fa-li"><i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i></span><Link className='footer__link' to="/services/">Services</Link></li> */}
+            <li>
+              <span className="footer__icon-list fa-li">
+                <i className="fa-solid fa-angle-right" style={{color: '#0d6efd'}}></i>
+              </span>
+              <Link className='footer__link' to="/services/">
+                Services
+              </Link>
+            </li>
             <li>
               <span className="footer__icon-list fa-li">
                 <i
