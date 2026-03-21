@@ -318,6 +318,7 @@ const projects = {
         technologies: [
             "React",
             "Bootstrap",
+            "EmailJS",
             "FontAwesome",
         ],
         notes: [

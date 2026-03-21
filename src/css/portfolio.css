@@ -18,6 +18,19 @@
     padding: 0;
 }
 
+.portoflio__principal-text.portoflio__principal-text--link {
+    padding: 0;
+    text-decoration: none;
+    color: #0d6efd;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.portoflio__principal-text.portoflio__principal-text--link:hover {
+    /*text-decoration: underline;*/
+    transform: scale(1.07);
+}
+
 .portfolio__line {
     border-bottom: solid 4px #0d6efd;
     margin: 15px 39% 55px 39%;

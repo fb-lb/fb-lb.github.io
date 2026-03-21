@@ -46,6 +46,8 @@ export default function Portfolio() {
             <p className='portoflio__principal-text'>Chacun des projets présentés est <strong className='portoflio__principal-text portoflio__principal-text--strong'>hébergé</strong> et donc consultable en ligne. Le <strong className='portoflio__principal-text portoflio__principal-text--strong'>dépôt GitHub</strong> de chacun de ces projets aussi consultable. Une présentation de chaque projet et de sa stack est aussi disponible en cliquant sur &quot;En savoir plus&quot;.</p>
             <p className='portoflio__principal-text mt-3'>L&apos;ensemble des informations présentes dans ces projets sont fictives.</p>
             <p className='portoflio__principal-text'>N&apos;hésitez à intéragir avec les CRUD des comptes administrateurs (quand il y en a) car je peux rétablir les bases de données avec des fixtures en cas de besoin.</p>
+            <p className='portoflio__principal-text mt-3'>Les formulaires que vous trouverez dans les applications ne sont pas fonctionnels car EmailJS ne propose que deux templates gratuits.</p>
+            <p className='portoflio__principal-text'>Les seuls formulaires utilisable sont celui de ce portfolio (page <Link className='portoflio__principal-text portoflio__principal-text--link' to="/contact">contact</Link>) et le formulaire d&apos;inscription de l&apos;application Knowledge.</p>
             <div className='portfolio__line'></div>
             <div className='portfolio__achievement-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
                 { projectsArray.map((project, index) => (

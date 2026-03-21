@@ -1,46 +1,77 @@
 import '../css/contact.css';
 import { useState } from 'react';
 import user from '../data/user';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-
-    const mailAddress = import.meta.env.VITE_EMAIL;
-
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [tel, setTel] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
+    // EmailJS initialization
+    emailjs.init({publicKey: import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY});
+
     // Validity fields checking on form submission
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
 
         setName(name.trim());
         setMail(mail.trim());
         setSubject(subject.trim());
-        setTel(tel.trim());
+        setTel(tel => tel.trim());
         setMessage(message.trim());
 
-        if (name == "" || mail == "" || subject == "" || tel == "" || message == "") {
-            alert("Merci de bien vouloir remplir tous les champs")
-        } else if (!mail.includes('@')) {
-            alert("L'E-mail doit contenir le caractère '@'");;
-        } else if (mail.startsWith('@')) {
+        const trimmedName = name.trim();
+        const trimmedEmail = mail.trim();
+        const trimmedSubject = subject.trim();
+        const trimmedTel = tel.trim();
+        const trimmedMessage = message.trim();
+
+        if (trimmedName == "" || trimmedEmail == "" || trimmedSubject == "" || trimmedMessage == "") {
+            alert("Merci de bien vouloir remplir tous les champs (sauf le téléphone qui est facultatif)");
+        } else if (trimmedTel && (!Number(trimmedTel) || trimmedTel.length !== 10)) {
+            alert("Le numéro de téléphone doit être composé uniquement de 10 chiffres, sans espace.");
+        } else if (!trimmedEmail.includes('@')) {
+            alert("L'E-mail doit contenir le caractère '@'");
+        } else if (trimmedEmail.startsWith('@')) {
             alert("L'E-mail doit contenir une partie précédent le caractère '@'");
-        } else if (mail.endsWith('@')) {
+        } else if (trimmedEmail.endsWith('@')) {
             alert("L'E-mail doit contenir une partie suivant le caractère '@'");
-        } else if (mail.indexOf('@') != mail.lastIndexOf('@')) {
+        } else if (trimmedEmail.indexOf('@') != trimmedEmail.lastIndexOf('@')) {
             alert("L'E-mail doit contenir un seul caractère '@'");
         } else {
-            setName('');
-            setMail('');
-            setTel('');
-            setSubject('');
-            setMessage('');
-            alert("Merci, votre mail a bien été envoyé à " + mailAddress);
+            try {
+                const emailJsResponse = await emailjs.send(import.meta.env.VITE_EMAIL_JS_SERVICE_ID, import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID, {
+                    userMail: user.mail,
+                    name: trimmedName,
+                    mail: trimmedEmail,
+                    phone: trimmedTel,
+                    subject: trimmedSubject,
+                    message: trimmedMessage,
+                });
+
+                if (emailJsResponse.status === 200 && emailJsResponse.text === "OK") {
+                    setName('');
+                    setMail('');
+                    setTel('');
+                    setSubject('');
+                    setMessage('');
+                    alert("Merci, votre mail a bien été envoyé à " + user.mail);
+                } else {
+                    alert("Nous ne parvenons pas à envoyer votre e-mail. Veuillez le renvoyer à cette adresse : " + user.mail);
+                }
+            } catch (error) {
+                alert("Echec de la procédure d'envoi. Votre e-mail n'a pas été envoyé. Veuillez le renvoyer à cette adresse : " + user.mail);
+                throw error;
+            }
+            
         };
     }
+
+    
+    
 
     return(
         <main className="contact">
@@ -55,7 +86,7 @@ export default function Contact() {
                             <form className='block-form__form' action="#" method='post'>
                                 <input className='form-control' name='name' type="text" placeholder='Votre nom' maxLength={70} value={name} onChange={e => setName(e.target.value)}/>
                                 <input className='form-control' name='mail' type="email" placeholder='Votre adresse email' maxLength={70} value={mail} onChange={e => setMail(e.target.value)}/>
-                                <input className='form-control' name='tel' type="tel" placeholder='Votre numéro de téléphone' maxLength={30} value={tel} onChange={e => setTel(e.target.value)}/>
+                                <input className='form-control' name='tel' type="tel" placeholder='Votre numéro de téléphone (facultatif). Ex : 0601020304' maxLength={10} value={tel} onChange={e => setTel(e.target.value)}/>
                                 <input className='form-control' name='subject' type="text" placeholder='Sujet' maxLength={100} value={subject} onChange={e => setSubject(e.target.value)}/>
                                 <textarea className='block-form__form-message form-control' name="message" id="message" placeholder='Votre message' rows='4' maxLength='1500' value={message} onChange={e => setMessage(e.target.value)}></textarea>
                                 <button className='btn btn-primary' type='submit' onClick={handleSubmit}>Envoyer</button>
