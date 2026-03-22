@@ -15,22 +15,21 @@ export default function Home() {
             <div className='about'>
                 <div className='about__block'>
                     <h3 className='about__h3' id='about'>À propos</h3>
-                    <p className='about__text'>Bienvenue sur mon portfolio. Vous trouverez ici les projets web que j&apos;ai personnellement développé.</p>
+                    <p className='about__text'>Développeur web en fin de formation, je conçois et développe des applications web modernes et performantes.</p>
                     <p className='about__text'>Passionné par l&apos;informatique et les nouvelles technologies, j&apos;ai suivi
-                        une formation de <strong className='about__strong-text'>développeur et web mobile</strong> au CEF (Centre Européen de Formation).
-                        Au cours de cette formation, j&apos;ai pu acquérir des compétences solides pour
-                        travailler dans le domaine du <strong className='about__strong-text'>développement web</strong>.
+                        une formation de <strong className='about__strong-text'>développeur et web mobile</strong> au CEF (Centre Européen de Formation),
+                        au cours de laquelle j&apos;ai acquis des compétences solides en développement web <strong className='about__strong-text'>front-end</strong> et <strong className='about__strong-text'>back-end</strong>.
                     </p>
-                    <p className='about__text'>Basé aux alentours de Rennes, je suis en recherche d&apos;un stage d&apos;une agence 
-                        digitale pour concrétiser ma formation de <strong className='about__strong-text'>développeur web full stack</strong>.
+                    <p className='about__text'>Basé aux alentours de Rennes, je suis actuellement à la recherche d&apos;un stage au sein d&apos;une agence 
+                        digitale afin de concrétiser ma formation et développer mon expérience profesionnelle.
                     </p>
-                    <p className='about__text'>J&apos;accorde une attention particulière à la qualité du code que j&apos;écris 
-                        et je respecte les bonnes pratiques du web.
+                    <p className='about__text'>J&apos;accorde une attention particulière à la qualité du code, à la maintenabilité et 
+                        au respect des bonnes pratiques du web.
                     </p>
                 </div>
-                <div className='about__block'>
-                    <img className='about__image' alt="Homme d'environ 30 ans chatain clair avec de la barbe assis dans un bureau." src="/assets/img/about.jpg"/>
-                    <h4 className='about__h4'>Mes compétences</h4>
+                <div className='about__block pt-3'>
+                    <img className='about__image mt-3' alt="Portrait d'un développeur travaillant à son bureau" src="/assets/img/about.jpg"/>
+                    {/* <h4 className='about__h4'>Mes compétences</h4>
                     <section className='about__skill'>
                         <h5 className='about__h5'>HTML 90%</h5>
                         <div className="progress" role="progressbar" aria-label="Danger example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
@@ -60,7 +59,7 @@ export default function Home() {
                         <div className="progress" role="progressbar" aria-label="Primary example" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                             <div className="progress-bar bg-primary" style={{width: '80%'}}></div>
                         </div>
-                    </section>
+                    </section> */}
                 </div>
             </div>
         </main>
