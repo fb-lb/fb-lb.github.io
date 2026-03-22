@@ -10,6 +10,8 @@ import Not_found from './pages/Not_found.jsx';
 import { Routes, Route } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import Project from './pages/Project.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 export default function App() { 
 
@@ -30,23 +32,17 @@ export default function App() {
       } else if (location.pathname != "/mentions-legales/" && robots != null) {
         robots.remove();
       } 
-
-      // Go to url hash
-      if (location.hash) {
-        const el = document.getElementById(location.hash.slice(1));
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
   }, [location]);
 
   return (
     <>
+      <ScrollToTop/>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/services/" element={<Services/>}></Route>
         <Route path="/portfolio/" element={<Portfolio/>}></Route>
+        <Route path="/projet/:projectSlug" element={<Project/>}></Route>
         <Route path="/contact/" element={<Contact/>}></Route>
         <Route path="/mentions-legales/" element={<LegalMentions/>}></Route>
         <Route path="*" element={<Not_found/>}></Route>

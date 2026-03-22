@@ -1,52 +1,84 @@
 import '../css/contact.css';
 import { useState } from 'react';
+import user from '../data/user';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-
-    const mailAddress = import.meta.env.VITE_EMAIL;
-
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [tel, setTel] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
+    // EmailJS initialization
+    emailjs.init({publicKey: import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY});
+
     // Validity fields checking on form submission
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
 
         setName(name.trim());
         setMail(mail.trim());
         setSubject(subject.trim());
-        setTel(tel.trim());
+        setTel(tel => tel.trim());
         setMessage(message.trim());
 
-        if (name == "" || mail == "" || subject == "" || tel == "" || message == "") {
-            alert("Merci de bien vouloir remplir tous les champs")
-        } else if (!mail.includes('@')) {
-            alert("L'E-mail doit contenir le caractère '@'");;
-        } else if (mail.startsWith('@')) {
+        const trimmedName = name.trim();
+        const trimmedEmail = mail.trim();
+        const trimmedSubject = subject.trim();
+        const trimmedTel = tel.trim();
+        const trimmedMessage = message.trim();
+
+        if (trimmedName == "" || trimmedEmail == "" || trimmedSubject == "" || trimmedMessage == "") {
+            alert("Merci de bien vouloir remplir tous les champs (sauf le téléphone qui est facultatif)");
+        } else if (trimmedTel && (!Number(trimmedTel) || trimmedTel.length !== 10)) {
+            alert("Le numéro de téléphone doit être composé uniquement de 10 chiffres, sans espace.");
+        } else if (!trimmedEmail.includes('@')) {
+            alert("L'E-mail doit contenir le caractère '@'");
+        } else if (trimmedEmail.startsWith('@')) {
             alert("L'E-mail doit contenir une partie précédent le caractère '@'");
-        } else if (mail.endsWith('@')) {
+        } else if (trimmedEmail.endsWith('@')) {
             alert("L'E-mail doit contenir une partie suivant le caractère '@'");
-        } else if (mail.indexOf('@') != mail.lastIndexOf('@')) {
+        } else if (trimmedEmail.indexOf('@') != trimmedEmail.lastIndexOf('@')) {
             alert("L'E-mail doit contenir un seul caractère '@'");
         } else {
-            setName('');
-            setMail('');
-            setTel('');
-            setSubject('');
-            setMessage('');
-            alert("Merci, votre mail a bien été envoyé à " + mailAddress);
+            try {
+                const emailJsResponse = await emailjs.send(import.meta.env.VITE_EMAIL_JS_SERVICE_ID, import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID, {
+                    userMail: user.mail,
+                    name: trimmedName,
+                    mail: trimmedEmail,
+                    phone: trimmedTel,
+                    subject: trimmedSubject,
+                    message: trimmedMessage,
+                });
+
+                if (emailJsResponse.status === 200 && emailJsResponse.text === "OK") {
+                    setName('');
+                    setMail('');
+                    setTel('');
+                    setSubject('');
+                    setMessage('');
+                    alert("Merci, votre mail a bien été envoyé à " + user.mail);
+                } else {
+                    alert("Nous ne parvenons pas à envoyer votre e-mail. Veuillez le renvoyer à cette adresse : " + user.mail);
+                }
+            } catch (error) {
+                alert("Echec de la procédure d'envoi. Votre e-mail n'a pas été envoyé. Veuillez le renvoyer à cette adresse : " + user.mail);
+                throw error;
+            }
+            
         };
     }
+
+    
+    
 
     return(
         <main className="contact">
             <div className='contact__filter'>
                 <div className='contact__content'>
                     <h1 className='contact__title text-uppercase'>Me contacter</h1>
-                    <p className='contact__text'>Pour me contacter en vue d&apos;un entretien ou d&apos;une future collaboration, merci de remplir le formulaire de contact.</p>
+                    <p className='contact__text'>Pour me contacter en vue d&apos;un entretien, d&apos;une future collaboration ou pour toute information, merci de remplir le formulaire de contact ou d&apos;utiliser l&apos;adresse mail ci-dessous.</p>
                     <div className='contact__line'></div>
                     <div className='contact__block-sections'>
                         <section className='block-form'>
@@ -54,7 +86,7 @@ export default function Contact() {
                             <form className='block-form__form' action="#" method='post'>
                                 <input className='form-control' name='name' type="text" placeholder='Votre nom' maxLength={70} value={name} onChange={e => setName(e.target.value)}/>
                                 <input className='form-control' name='mail' type="email" placeholder='Votre adresse email' maxLength={70} value={mail} onChange={e => setMail(e.target.value)}/>
-                                <input className='form-control' name='tel' type="tel" placeholder='Votre numéro de téléphone' maxLength={30} value={tel} onChange={e => setTel(e.target.value)}/>
+                                <input className='form-control' name='tel' type="tel" placeholder='Votre numéro de téléphone (facultatif). Ex : 0601020304' maxLength={10} value={tel} onChange={e => setTel(e.target.value)}/>
                                 <input className='form-control' name='subject' type="text" placeholder='Sujet' maxLength={100} value={subject} onChange={e => setSubject(e.target.value)}/>
                                 <textarea className='block-form__form-message form-control' name="message" id="message" placeholder='Votre message' rows='4' maxLength='1500' value={message} onChange={e => setMessage(e.target.value)}></textarea>
                                 <button className='btn btn-primary' type='submit' onClick={handleSubmit}>Envoyer</button>
@@ -63,9 +95,10 @@ export default function Contact() {
                         <section className='block-address'>
                             <h2 className='block-address__title'>Mes coordonnées</h2>
                             <address className='block-address__address'>
-                                <p className='block-address__address-text'><i className="fa-solid fa-location-dot" style={{color: '#444444'}}></i> 40 Rue Laure Diebold, 69009 Lyon, France</p>
-                                <p className='block-address__address-text'><i className="fa-solid fa-mobile-screen-button" style={{color: '#444444'}}></i> 06 20 30 40 50</p>
-                                <iframe className='block-address__map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6271524621784!2d4.7964039754028995!3d45.77866197108082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb65edac5b3f%3A0xe01c47049cb2e2b9!2s40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1724658749449!5m2!1sfr!2sfr" width="100%" height="300" style={{border:'0'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                <p className='block-address__address-text'><i className="fa-solid fa-location-dot" style={{color: '#444444'}}></i> <a className='text-decoration-none' href={user.googleMapLink} target="_blank" rel="noopener noreferrer">{user.address.number} {user.address.street}, {user.address.postalCode} {user.address.city}, {user.address.country}</a></p>
+                                <p className='block-address__address-text'><i className="fa-solid fa-mobile-screen-button" style={{color: '#444444'}}></i> <a className='text-decoration-none' href={"tel:" + user.internationalPhone.join('')}>{user.phone.join(' ')}</a></p>
+                                <p className='block-address__address-text'><i className="fa-solid fa-envelope" style={{color: '#444444'}}></i> <a className='text-decoration-none' href={"mailto:" + user.mail}>{user.mail}</a></p>
+                                <iframe className='block-address__map' src={user.iframeMapLink} width="100%" height="300" style={{border:'0'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </address>
                         </section>
                     </div>

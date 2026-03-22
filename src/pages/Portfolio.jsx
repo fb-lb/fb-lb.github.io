@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import '../css/portfolio.css';
 import { PropTypes } from 'prop-types';
+import projects from '../data/projects';
 
 Project.propTypes = {
     srcImg: PropTypes.string,
@@ -7,106 +9,60 @@ Project.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     linkTitle: PropTypes.string,
-    link: PropTypes.string,
-    technology: PropTypes.string
+    projectLink: PropTypes.string,
+    githubLink: PropTypes.string,
+    websiteLink: PropTypes.string,
+    stack: PropTypes.string
   };
 
 function Project(props) {
     return (
-        <div className='portfolio__achievement col'>
+        <div className='portfolio__achievement'>
             <article className="card text-center">
                 <img src={props.srcImg} className="card-img-top" alt={props.altImg}/>
-                <div className="card-body">
+                <div className="card-body d-flex flex-column">
                     <h2 className="portfolio__achievement-title card-title">{props.title}</h2>
-                    <p className="portfolio__achievement-text card-text mb-3">{props.description}</p>
-                    <a className="btn btn-outline-primary" title={"Accéder au site web du projet " + props.linkTitle} href={props.link} target="_blank" rel="noreferrer nofollow">Voir</a>     
+                    <p className="portfolio__achievement-text card-text mb-4 flex-grow-1">{props.description}</p>
+                    <div className='d-flex justify-content-evenly mb-3 gap-3'>
+                        <Link className="btn btn-outline-primary" title={"En savoir plus sur le projet " + props.linkTitle} to={props.projectLink}>En savoir plus</Link>
+                        <a className="btn btn-outline-primary" title={"Accéder au dépôt GitHub du projet " + props.linkTitle} href={props.githubLink} target="_blank" rel="noreferrer nofollow">Dépôt GitHub</a>
+                    </div>
+                    <a className="btn btn-outline-primary mx-auto" title={"Accéder au site web du projet " + props.linkTitle} href={props.websiteLink} target="_blank" rel="noreferrer nofollow">Site</a>     
                 </div>
-                <p className="portfolio__achievement-text card-footer">{props.technology}</p>
+                <p className="portfolio__achievement-text card-footer"><strong>Stack principale</strong><br/>{props.stack}</p>
             </article>
         </div>
     ); 
 }
+
+const projectsArray = Object.entries(projects);
 
 export default function Portfolio() {
     return (
         <main className="portfolio">
             <div className='portfolio__banner'></div>
             <h1 className='portfolio__title text-uppercase'>Portfolio</h1>
-            <p className='portoflio__principal-text'>Voici quelques-unes de mes réalisations.</p>
+            <p className='portoflio__principal-text'>Vous trouverez ci-dessous une sélection de mes réalisations personnelles.</p>
+            <p className='portoflio__principal-text'>Chaque projet est <strong className='portoflio__principal-text portoflio__principal-text--strong'>accessible en ligne</strong> et accompagné de son dépôt <strong className='portoflio__principal-text portoflio__principal-text--strong'>GitHub</strong>. Une présentation détaillée ainsi que les technologies utilisées sont disponibles via le bouton &quot;En savoir plus&quot;.</p>
+            <p className='portoflio__principal-text mt-3'>L&apos;ensemble des informations présentes dans ces projets sont fictives.</p>
+            <p className='portoflio__principal-text'>Vous pouvez tester les fonctionnalités proposées dans les applications, notamment la gestion des données (CRUD) lorsqu&apos;elle est disponible.</p>
+            <p className='portoflio__principal-text mt-3'>Certains formulaires sont limités pour des raisons techniques, à l&apos;exception de ceux présents sur ce portfolio (page <Link className='portoflio__principal-text portoflio__principal-text--link' to="/contact">contact</Link>) et sur l&apos;application Knowledge.</p>
             <div className='portfolio__line'></div>
             <div className='portfolio__achievement-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
-                <Project
-                    srcImg="/assets/img/portfolio/knowledge.jpg"
-                    altImg="Screenshot du site knowledge. On y voit en haut l'en-tête sur fond bleu clair avec le logo de l'entreprise dans la partie supérieure et le menu de navigation sur la partie basse. Sous l'en-tête, on peut voir le texte du contenu de la page d'accueil."
-                    title="Knowledge"
-                    description="Réalisation d'une plateforme d'e-learning."
-                    linkTitle="Knowledge"
-                    link="https://fb-lb.github.io/CEF_devoirs_knowledge-front/"
-                    technology="Site réalisé avec Angular, Express et MySQL"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/stubborn.jpg"
-                    altImg="Screenshot du site stubborn. On y voit en haut à gauche le logo du site sur fond gris. En-dessous, il y a les trois pulls mis en avant sur la page d'accueil."
-                    title="Stubborn"
-                    description="Réalisation d'une application e-commerce."
-                    linkTitle="Stubborn"
-                    link="https://hyle.alwaysdata.net/"
-                    technology="Site réalisé avec Symfony (fullstack) et MySQL"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/mediatheque.jpg"
-                    altImg="Screenshot du site de la médiathèque. On y voit le texte présent sur la page d'accueil."
-                    title="Médiathèque"
-                    description="Réalisation d'une application pour des réservations de médias."
-                    linkTitle="Médiathèque"
-                    link="https://cef-devoirs-mediatheque.onrender.com/"
-                    technology="Site réalisé avec Django et MySQL"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/catway.jpg"
-                    altImg="Screenshot du site catway. On y voit le texte présent sur la page d'accueil."
-                    title="Catway API"
-                    description="Réalisation d'une API pour des réservations de quai d'amarrage dans un port."
-                    linkTitle="Catway API"
-                    link="https://catway-api.onrender.com/"
-                    technology="Site réalisé avec Express et EJS (+ SwaggerHub)"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/trouve-ton-artisan.jpg"
-                    altImg="Screenshot du site Trouve ton artisan. On y voit en haut l'en-tête contenant une barre de recherche et les différentes catégories des artisans. Sous l'en-tête, on peut voir la photo d'un paysage avec un lac au premier plan et des montagnes au second plan. Sous l'image il y a un schéma des étapes pour trouver son artisan sur le site."
-                    title="Trouve ton artisan !"
-                    description="Réalisation d'une plateforme pour trouver et contacter un artisan."
-                    linkTitle="Trouve ton artisan !"
-                    link="https://fb-lb.github.io/CEF_devoirs_trouve-ton-artisan/"
-                    technology="Site réalisé avec Angular (+ Tailwind CSS, Sentry, EmailJS)"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/au-petit-village.jpg"
-                    altImg="Screenshot du site au petit village. On y voit de haut en bas le logo du site, la phrase d'accueil du site, les personnages du village d'Astérix. En-dessous à gauche, il y a un texte et à droite une image du village d'Astérix entourée d'un halo vert."
-                    title="Au Petit Village"
-                    description="Réalisation du front-end d'une application e-commerce."
-                    linkTitle="Au Petit Village"
-                    link="https://fb-lb.github.io/CEF_devoirs_au-petit-village/"
-                    technology="Site réalisé avec Angular"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/portfolio.jpg"
-                    altImg="Screenshot du site du portfolio initial. On y voit une photo d'un homme brun. Les couleurs du fonds sont des teintes bleues."
-                    title="Portfolio initial"
-                    description="Réalisation d'un site One Page."
-                    linkTitle="Portfolio initial"
-                    link="https://fb-lb.github.io/CEF_devoirs_portfolio/"
-                    technology="Site réalisé avec Vue.js"
-                />
-                <Project
-                    srcImg="/assets/img/portfolio/cv.jpg"
-                    altImg="Screenshot du site contenant le CV. On y voit une photo d'un homme brun. Les couleurs du fonds sont blanc et rouge."
-                    title="Curriculum Vitæ"
-                    description="Réalisation d'un CV en HTML et CSS."
-                    linkTitle="CV"
-                    link="https://fb-lb.github.io/CEF_devoirs_cv/"
-                    technology="Site réalisé en HTML/CSS"
-                />
+                { projectsArray.map((project, index) => (
+                    <Project
+                        key={ index }
+                        srcImg={ project[1].portfolioImage.source }
+                        altImg={ project[1].portfolioImage.alternative }
+                        title={ project[1].name }
+                        description={ project[1].shortDescription }
+                        linkTitle={ project[1].name }
+                        projectLink={"/projet/" +  project[1].slug + "/"}
+                        githubLink={ project[1].links.github }
+                        websiteLink={ project[1].links.website }
+                        stack={ project[1].stack.join(' / ') }
+                    />
+                )) }
             </div>
         </main>
     );
