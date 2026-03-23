@@ -46,11 +46,6 @@ const projects = {
                 { type : "text", content : "Base de données hébergée via Aiven." },
             ],
             [
-                { type : "text", content : "Le back-end étant hébergé sur Render avec le plan gratuit. Cela implique qu'il est mis en veille après 5 minutes d'inactivité. Afin de profiter pleinement de l'expérience de l'application merci bien vouloir sortir le back-end de sa veille en cliquant " },
-                { type : "link", content : "ici", source: "https://knowledge-back-jrzv.onrender.com/", target: "_blank" },
-                { type: "text", content : " et d'attendre (1 à 2 minutes) que la page affiche le message : \"Le back-end de l'application Knowledge est prêt à recevoir des requêtes.\" avant de vous rendre sur le front-end via le lien ci-dessous." },
-            ],
-            [
                 { type: "text", content : "Le back-end de l'application est sur un repository différent de celui du front-end. Voici donc le lien vers " },
                 { type : "link", content : "le dépôt GitHub du back-end", source: "https://github.com/fb-lb/CEF_devoirs_knowledge-back", target: "_blank" },
                 { type: "text", content : "." },
@@ -196,9 +191,6 @@ const projects = {
             ],
             [
                 { type : "text", content : "Base de données hébergée via MongoDB Atlas." },
-            ],
-            [
-                { type : "text", content : "Lorsque vous arrivez sur le site, il faut laisser le temps (1 à 2 minutes) à l'application de sortir de sa veille (hébergement gratuit sur Render = mise en veille de l'application après 5 minutes d'inactivité)." },
             ],
         ],
         links: {
